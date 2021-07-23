@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet("/log")
 public class LogServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         LogQueriesImpl log = new LogQueriesImpl();
         for (String s: log.getLog()) {
             resp.getWriter().println(s);

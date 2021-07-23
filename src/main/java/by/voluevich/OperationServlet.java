@@ -13,7 +13,7 @@ import java.io.IOException;
 @WebServlet("/mathOperation")
 public class OperationServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int numOne = Integer.parseInt(req.getParameter("numOne"));
         int numTwo = Integer.parseInt(req.getParameter("numTwo"));
         String operation = req.getParameter("operation");
