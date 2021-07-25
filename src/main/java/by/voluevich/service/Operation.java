@@ -25,9 +25,9 @@ public class Operation {
         this.two = two;
     }
 
-    public String getOperation(String operation){
+    public String getOperation(String operation) {
         String result = "";
-        switch (operation){
+        switch (operation) {
             case "add":
                 result = "Result: " + Math.addExact(one, two) + ".";
                 break;
@@ -38,7 +38,7 @@ public class Operation {
                 result = "Result: " + Math.multiplyExact(one, two) + ".";
                 break;
             case "div":
-                result = "Result: " + Math.floorDiv(one, two) + ".";
+                result = "Result: " + ((double) one / two) + ".";
                 break;
             case "mod":
                 result = "Result: " + Math.floorMod(one, two) + ".";
