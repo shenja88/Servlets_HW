@@ -2,6 +2,7 @@ package by.voluevich;
 
 import by.voluevich.Dao.LogQueriesImpl;
 import by.voluevich.service.Operation;
+import by.voluevich.service.utils.CheckInput;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,14 +17,18 @@ public class OperationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int numOne = Integer.parseInt(req.getParameter("numOne"));
         int numTwo = Integer.parseInt(req.getParameter("numTwo"));
-        String operation = req.getParameter("operation");
+        String typeOp = req.getParameter("operation");
 
-        Operation operation1 = new Operation(numOne, numTwo);
-        String result = operation1.getOperation(operation);
+        if(CheckInput.isExistOperation(typeOp)) {
+            Operation operation = new Operation(numOne, numTwo);
+            String result = operation.getOperation(typeOp);
 
-        LogQueriesImpl logQueries = new LogQueriesImpl();
-        logQueries.addQuery(numOne, numTwo, operation, result);
+            LogQueriesImpl logQueries = new LogQueriesImpl();
+            logQueries.addQuery(numOne, numTwo, typeOp, result);
 
-        resp.getWriter().print(result);
+            resp.getWriter().print(result);
+        }else{
+            resp.getWriter().print("Operation '" + typeOp + "' not found.");
+        }
     }
 }
