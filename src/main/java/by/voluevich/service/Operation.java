@@ -1,32 +1,12 @@
 package by.voluevich.service;
 
+import by.voluevich.entity.MathOperation;
+
 public class Operation {
-    private int one;
-    private int two;
 
-    public Operation(int one, int two) {
-        this.one = one;
-        this.two = two;
-    }
-
-    public int getOne() {
-        return one;
-    }
-
-    public void setOne(int one) {
-        this.one = one;
-    }
-
-    public int getTwo() {
-        return two;
-    }
-
-    public void setTwo(int two) {
-        this.two = two;
-    }
-
-    public String getOperation(String operation) {
+    public static MathOperation getOperation(int one, int two, String operation) {
         String result = "";
+        MathOperation mathOperation = new MathOperation(one, two, operation, result);
         switch (operation) {
             case "add":
                 result = "Result: " + Math.addExact(one, two) + ".";
@@ -44,6 +24,7 @@ public class Operation {
                 result = "Result: " + Math.floorMod(one, two) + ".";
                 break;
         }
-        return result;
+        mathOperation.setResult(result);
+        return mathOperation;
     }
 }

@@ -1,6 +1,7 @@
 package by.voluevich;
 
-import by.voluevich.Dao.LogQueriesImpl;
+import by.voluevich.dao.LogQueriesImpl;
+import by.voluevich.entity.MathOperation;
 import by.voluevich.service.utils.CheckInput;
 
 import javax.servlet.ServletException;
@@ -19,14 +20,14 @@ public class LogServlet extends HttpServlet {
         LogQueriesImpl log = new LogQueriesImpl();
         if (typeOp != null) {
             if (CheckInput.isExistOperation(typeOp)) {
-                for (String s : log.getLogByType(typeOp)) {
+                for (MathOperation s : log.getLogByType(typeOp)) {
                     resp.getWriter().println(s);
                 }
             }else{
                 resp.getWriter().print("Operation '" + typeOp + "' not found.");
             }
         } else {
-            for (String s : log.getLog()) {
+            for (MathOperation s : log.getLog()) {
                 resp.getWriter().println(s);
             }
         }

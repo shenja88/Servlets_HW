@@ -1,6 +1,7 @@
 package by.voluevich;
 
-import by.voluevich.Dao.LogQueriesImpl;
+import by.voluevich.dao.LogQueriesImpl;
+import by.voluevich.entity.MathOperation;
 import by.voluevich.service.Operation;
 import by.voluevich.service.utils.CheckInput;
 
@@ -20,11 +21,10 @@ public class OperationServlet extends HttpServlet {
         String typeOp = req.getParameter("operation");
 
         if(CheckInput.isExistOperation(typeOp)) {
-            Operation operation = new Operation(numOne, numTwo);
-            String result = operation.getOperation(typeOp);
+            MathOperation result = Operation.getOperation(numOne, numTwo, typeOp);
 
             LogQueriesImpl logQueries = new LogQueriesImpl();
-            logQueries.addQuery(numOne, numTwo, typeOp, result);
+            logQueries.addQuery(result);
 
             resp.getWriter().print(result);
         }else{
