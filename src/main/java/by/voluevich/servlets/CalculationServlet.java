@@ -29,7 +29,7 @@ public class CalculationServlet extends HttpServlet {
         HistoryQueriesDaoImpl logQueries = new HistoryQueriesDaoImpl();
         logQueries.addQuery(result);
 
-        resp.getWriter().print("Result: " + result);
+        resp.getWriter().print("Result: " + result.getResult());
     }
 
     private Operation getOperation(String type) {

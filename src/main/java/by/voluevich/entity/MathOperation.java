@@ -17,19 +17,19 @@ public class MathOperation {
         this.user = user;
     }
 
-    public int getNumOne() {
-        return (int) numOne;
+    public double getNumOne() {
+        return numOne;
     }
 
-    public void setNumOne(int numOne) {
+    public void setNumOne(double numOne) {
         this.numOne = numOne;
     }
 
-    public int getNumTwo() {
-        return (int) numTwo;
+    public double getNumTwo() {
+        return numTwo;
     }
 
-    public void setNumTwo(int numTwo) {
+    public void setNumTwo(double numTwo) {
         this.numTwo = numTwo;
     }
 
@@ -41,11 +41,11 @@ public class MathOperation {
         this.typeOp = typeOp;
     }
 
-    public int getResult() {
-        return (int) result;
+    public double getResult() {
+        return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(double result) {
         this.result = result;
     }
 
