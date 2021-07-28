@@ -1,23 +1,24 @@
 package by.voluevich.entity;
 
-public class MathOperation {
-    private int numOne;
-    private int numTwo;
-    private String typeOp;
-    private String result;
+import java.util.Objects;
 
-    public MathOperation(int numOne, int numTwo, String typeOp, String result) {
+public class MathOperation {
+    private double numOne;
+    private double numTwo;
+    private String typeOp;
+    private double result;
+    private User user;
+
+    public MathOperation(double numOne, double numTwo, String typeOp, double result, User user) {
         this.numOne = numOne;
         this.numTwo = numTwo;
         this.typeOp = typeOp;
         this.result = result;
-    }
-
-    public MathOperation() {
+        this.user = user;
     }
 
     public int getNumOne() {
-        return numOne;
+        return (int) numOne;
     }
 
     public void setNumOne(int numOne) {
@@ -25,7 +26,7 @@ public class MathOperation {
     }
 
     public int getNumTwo() {
-        return numTwo;
+        return (int) numTwo;
     }
 
     public void setNumTwo(int numTwo) {
@@ -40,16 +41,39 @@ public class MathOperation {
         this.typeOp = typeOp;
     }
 
-    public String getResult() {
-        return result;
+    public int getResult() {
+        return (int) result;
     }
 
-    public void setResult(String result) {
+    public void setResult(int result) {
         this.result = result;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MathOperation that = (MathOperation) o;
+        return numOne == that.numOne && numTwo == that.numTwo && Objects.equals(typeOp, that.typeOp)
+                && Objects.equals(result, that.result) && Objects.equals(user, that.user);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numOne, numTwo, typeOp, result, user);
     }
 
     @Override
     public String toString() {
-        return "Operation: " + typeOp + ", with number " + numOne + " and " + numTwo + ". " + result;
+        return "Operation: " + typeOp + ", with number " + numOne + " and " + numTwo + ". Result: " + result +
+                ". Operator: " + user.getLogin();
     }
 }
