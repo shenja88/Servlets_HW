@@ -17,6 +17,9 @@ public class MathOperation {
         this.user = user;
     }
 
+    public MathOperation() {
+    }
+
     public double getNumOne() {
         return numOne;
     }
