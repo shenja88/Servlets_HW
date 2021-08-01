@@ -16,6 +16,11 @@ public class LogInServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
@@ -23,9 +28,10 @@ public class LogInServlet extends HttpServlet {
         User user = new User(login, password);
         if(userDao.isExistUser(user)){
             req.getSession().setAttribute("user", user);
-            resp.getWriter().println("LogIn successful!");
+            resp.sendRedirect("/mathOperation");
         }else{
-            resp.getWriter().println("Invalid logIn!");
+            req.setAttribute("message_signIn","Invalid logIn!");
+            getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
         }
     }
 }

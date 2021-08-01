@@ -77,6 +77,6 @@ public class MathOperation {
     @Override
     public String toString() {
         return "Operation: " + typeOp + ", with number " + numOne + " and " + numTwo + ". Result: " + result +
-                ". Operator: " + user.getLogin();
+                ". Operator: " + user.getLogin() + "\n";
     }
 }

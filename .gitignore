@@ -12,7 +12,6 @@
 .idea*
 .idea**
 Lesson21(Servlet).iml
-pom.xml
 
 # Generated files
 .idea/**/contentModel.xml

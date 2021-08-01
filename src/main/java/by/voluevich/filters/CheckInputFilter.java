@@ -4,21 +4,20 @@ import by.voluevich.service.utils.CheckInput;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebFilter(servletNames = "CalculationServlet")
-
 public class CheckInputFilter extends HttpFilter {
-    @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        boolean check = true;
-        String typeOp = req.getParameter("operation");
 
-        if (CheckInput.isExistOperation(typeOp)) {
+    @Override
+    protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
+        boolean check = true;
+        if (req.getMethod().equals("POST")) {
+            String typeOp = req.getParameter("operation");
             String[] numStr = req.getParameterValues("num");
             for (String s : numStr) {
                 if (!CheckInput.checkDouble(s)) {
@@ -26,19 +25,17 @@ public class CheckInputFilter extends HttpFilter {
                 }
             }
             if (!check) {
-                res.getWriter().println(CheckInput.getInputMessage("Error! Enter numerical values."));
+                req.setAttribute("message_inp","Error! Enter numerical values.");
+                getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, res);
             }
 
-            if(CheckInput.zeroDiv(Double.parseDouble(numStr[1]), typeOp)){
+            if (CheckInput.zeroDiv(Double.parseDouble(numStr[1]), typeOp)) {
                 check = false;
-                res.getWriter().println(CheckInput.getInputMessage("Division by 0 is not possible"));
+                req.setAttribute("message_inp","Division by 0 is not possible");
+                getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, res);
             }
-        } else {
-            check = false;
-            res.getWriter().println(CheckInput.getInputMessage("Operation '" + typeOp + "' not found."));
         }
-
-        if(check) {
+        if (check) {
             chain.doFilter(req, res);
         }
     }

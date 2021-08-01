@@ -28,9 +28,5 @@ public class CheckInput {
     public static boolean zeroDiv (double divisor, String operation){
         return (divisor == 0 && operation.equals("division"));
     }
-
-    public static String getInputMessage(String mess){
-        return mess;
-    }
 }
 
