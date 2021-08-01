@@ -17,7 +17,7 @@ public class LogInFilter extends HttpFilter {
 
         User user = (User) req.getSession().getAttribute("user");
         if (user == null || req.getSession() == null) {
-            res.getWriter().print("You are not an authorized user.");
+            getServletContext().getRequestDispatcher("/RespAccessError.jsp").forward(req, res);
         } else {
             chain.doFilter(req, res);
         }
