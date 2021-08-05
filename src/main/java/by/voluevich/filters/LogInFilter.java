@@ -17,7 +17,7 @@ public class LogInFilter extends HttpFilter {
 
         User user = (User) req.getSession().getAttribute("user");
         if (user == null || req.getSession() == null) {
-            getServletContext().getRequestDispatcher("/RespAccessError.jsp").forward(req, res);
+            res.sendRedirect("/main");
         } else {
             chain.doFilter(req, res);
         }

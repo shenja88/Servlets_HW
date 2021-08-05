@@ -17,27 +17,26 @@ import java.util.List;
 public class HistoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/History.jsp").forward(req, resp);
+        String typeOp = req.getParameter("type");
+        if (typeOp == null) {
+            HistoryQueriesDaoImpl log = new HistoryQueriesDaoImpl();
+            List<MathOperation> mathOperationList = log.getLogBySession((User) req.getSession().getAttribute("user"));
+            req.setAttribute("log_list", mathOperationList);
+            getServletContext().getRequestDispatcher("/History.jsp").forward(req, resp);
+        } else {
+            doPost(req, resp);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String typeOp = req.getParameter("type");
-        boolean logBySession = Boolean.parseBoolean(req.getParameter("logBySession"));
         HistoryQueriesDaoImpl log = new HistoryQueriesDaoImpl();
-        if (typeOp != null) {
-            if (CheckInput.isExistOperation(typeOp)) {
-                List<MathOperation> mathOperationList = log.getLogByType(typeOp);
-                req.setAttribute("log_list", mathOperationList);
-            }
-        } else if (logBySession) {
-            List<MathOperation> mathOperationList = log.getLogBySession((User) req.getSession().getAttribute("user"));
+        if (CheckInput.isExistOperation(typeOp)) {
+            List<MathOperation> mathOperationList = log.getLogByType(typeOp);
             req.setAttribute("log_list", mathOperationList);
-        } else {
-            List<MathOperation> mathOperationList = log.getLog();
-            req.setAttribute("log_list", mathOperationList);
+            getServletContext().getRequestDispatcher("/History.jsp").forward(req, resp);
         }
-        getServletContext().getRequestDispatcher("/History.jsp").forward(req, resp);
     }
 }
 

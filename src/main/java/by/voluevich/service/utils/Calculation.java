@@ -7,7 +7,7 @@ import by.voluevich.service.operations.*;
 
 public class Calculation {
 
-    public static MathOperation getResult(User user, String typeOp, double... num) {
+    public static MathOperation getResult(User user, String typeOp, double ... num) {
         Operation operation = getOperation(typeOp);
         MathOperation mathOperation = operation.getCalculation(user, num);
 

@@ -16,7 +16,7 @@ public class LogInServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/LogIn.jsp").forward(req, resp);
     }
 
     @Override
@@ -27,11 +27,12 @@ public class LogInServlet extends HttpServlet {
         UserDao userDao = new UserDaoImpl();
         User user = new User(login, password);
         if(userDao.isExistUser(user)){
-            req.getSession().setAttribute("user", user);
+            User userAuth = userDao.getUsers().get(userDao.getUsers().indexOf(user));
+            req.getSession().setAttribute("user", userAuth);
             resp.sendRedirect("/mathOperation");
         }else{
             req.setAttribute("message_signIn","Invalid logIn!");
-            getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
+            getServletContext().getRequestDispatcher("/LogIn.jsp").forward(req, resp);
         }
     }
 }

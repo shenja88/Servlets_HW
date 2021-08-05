@@ -5,13 +5,18 @@ import by.voluevich.entity.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoImpl implements UserDao{
-    private static final List<User> USER_DAO_LIST = new ArrayList<>();
+public class UserDaoImpl implements UserDao {
+    private static List<User> users = new ArrayList<>();
+
+    @Override
+    public List<User> getUsers() {
+        return users;
+    }
 
     @Override
     public boolean addUser(User user) {
-        if(!isExistUser(user)){
-            USER_DAO_LIST.add(user);
+        if (!isExistUser(user)) {
+            users.add(user);
             return true;
         }
         return false;
@@ -19,6 +24,6 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean isExistUser(User user) {
-        return USER_DAO_LIST.contains(user);
+        return users.contains(user);
     }
 }

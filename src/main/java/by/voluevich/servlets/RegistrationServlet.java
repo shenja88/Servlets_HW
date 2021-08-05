@@ -16,21 +16,21 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
         UserDao userDao = new UserDaoImpl();
-        if(userDao.addUser(new User(login, password))){
-            req.setAttribute("message_reg", "Registration successful!");
+        if(userDao.addUser(new User(name, login, password))){
+            resp.sendRedirect("/Main.jsp");
         } else{
             req.setAttribute("message_reg","Invalid registration.");
+            getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
         }
-        getServletContext().getRequestDispatcher("/SignIn.jsp").forward(req, resp);
-
     }
 }

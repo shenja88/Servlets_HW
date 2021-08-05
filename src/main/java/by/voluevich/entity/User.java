@@ -3,15 +3,30 @@ package by.voluevich.entity;
 import java.util.Objects;
 
 public class User {
+    private String name;
     private String login;
     private String password;
 
-    public User( String login, String password) {
+    public User(String name, String login, String password) {
+        this.name = name;
+        this.login = login;
+        this.password = password;
+    }
+
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
     public User() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {
@@ -42,4 +57,5 @@ public class User {
     public int hashCode() {
         return Objects.hash(login, password);
     }
+
 }

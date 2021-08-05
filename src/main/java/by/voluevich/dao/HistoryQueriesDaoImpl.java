@@ -9,21 +9,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HistoryQueriesDaoImpl implements HistoryQueriesDao {
-    private static final List<MathOperation> LOG = new ArrayList<>();
+    private static List<MathOperation> log = new ArrayList<>();
 
     public List<MathOperation> getLog() {
-        return LOG;
+        return log;
     }
 
     public void addQuery(MathOperation mathOperation){
-        LOG.add(mathOperation);
+        log.add(mathOperation);
     }
 
     @Override
     public List<MathOperation> getLogByType(String operation) {
         List<MathOperation> logByType = new ArrayList<>();
         Pattern pattern = Pattern.compile(operation);
-        for (MathOperation s: LOG){
+        for (MathOperation s: log){
             Matcher matcher = pattern.matcher(s.getTypeOp());
             if(matcher.find()){
                 logByType.add(s);
@@ -35,7 +35,7 @@ public class HistoryQueriesDaoImpl implements HistoryQueriesDao {
     @Override
     public List<MathOperation> getLogBySession(User user) {
         List<MathOperation> mathOperations = new ArrayList<>();
-        for (MathOperation m: LOG){
+        for (MathOperation m: log){
             if(m.getUser().equals(user)){
                 mathOperations.add(m);
             }
