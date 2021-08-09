@@ -23,7 +23,7 @@ To change this template use File | Settings | File Templates.
     </select>
     <button type="submit">Get log by operation</button>
 </form>
-<p align="center"><button onclick='location.href="/mathOperation"'>Back to calculator</button></p>
+<p align="center"><a href="/mathOperation">Back to calculator</a></p>
 <table summary="Log list." align="center" bgcolor="#fff8dc" border="3" cellpadding="3">
     <tr>
         <th>Number 1</th>

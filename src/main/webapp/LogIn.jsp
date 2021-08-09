@@ -21,6 +21,6 @@
 <c:if test="${requestScope.message_signIn != null}">
     <p align="center">${requestScope.message_signIn}</p>
 </c:if>
-<p align="center"><button onclick='location.href="/main"'>Back to main</button></p>
+<p align="center"><a href="/main">Back to main</a></p>
 </body>
 </html>

@@ -22,6 +22,6 @@
 <c:if test="${requestScope.message_reg != null}">
     <p align="center">${requestScope.message_reg}</p>
 </c:if>
-<p align="center"><button onclick='location.href="/main"'>Back to main</button></p>
+<p align="center"><a href="/main">Back to main</a></p>
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1 align="center">Main menu</h1>
-<p align="center"><button onclick='location.href="/registration"'>Registration</button></p>
-<p align="center"><button onclick='location.href="/login"'> Sign in</button></p>
+<p align="center"><a href="/registration">Registration</a></p>
+<p align="center"><a href="/login"> Sign in</a></p>
 </body>
 </html>

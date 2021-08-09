@@ -32,7 +32,7 @@
 <c:if test="${requestScope.message_inp != null}">
     <p align="center" style="color: floralwhite">${requestScope.message_inp}</p>
 </c:if>
-<p align="center"><button onclick='location.href="/log"'>Get log by session</button></p>
-<p align="center"><button onclick='location.href="/logOut"'>Log out</button></p>
+<p align="center"><a href="/log">Get log by session</a></p>
+<p align="center"><a href="/logOut">Log out</a></p>
 </body>
 </html>
