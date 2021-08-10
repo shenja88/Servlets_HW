@@ -11,28 +11,33 @@
 <head>
     <title>Calculator</title>
 </head>
-<body background="https://remetc.ru/images/877940.jpg">
-<h1 align="center" style="color: floralwhite">Calculator</h1>
-<form align="center" action="/mathOperation" method="post">
-    <input type="number" step="0.00001" name="num" placeholder="number one">
-    <input type="number" step="0.00001" name="num" placeholder="number two">
-    <select required name="operation" size="?">
-        <option disabled>Select operation</option>
-        <option value="addition">addition</option>
-        <option value="division">division</option>
-        <option value="modulo">modulo</option>
-        <option value="multiplication">multiplication</option>
-        <option value="subtraction">subtraction</option>
-    </select>
-    <button type="submit">Calculate</button>
-</form>
-<c:if test="${requestScope.result != null}">
-<p align="center" style="color: floralwhite">Result: ${requestScope.result}</p>
-</c:if>
-<c:if test="${requestScope.message_inp != null}">
-    <p align="center" style="color: floralwhite">${requestScope.message_inp}</p>
-</c:if>
-<p align="center"><a href="/log">Get log by session</a></p>
-<p align="center"><a href="/logOut">Log out</a></p>
+<body>
+<h1 align="center">Calculator</h1>
+<div>
+    <form align="center" action="/mathOperation" method="post">
+        <label for="num1">Number one</label>
+        <input id="num1" type="number" step="0.00001" name="num">
+        <label for="num2">Number two</label>
+        <input id="num2" type="number" step="0.00001" name="num">
+        <label for="oper">Operation</label>
+        <select id="oper" required name="operation" size="?">
+            <option disabled>Select operation</option>
+            <option value="addition">addition</option>
+            <option value="division">division</option>
+            <option value="modulo">modulo</option>
+            <option value="multiplication">multiplication</option>
+            <option value="subtraction">subtraction</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+    <c:if test="${requestScope.result != null}">
+        <p align="center" style="color: dimgray">Result: ${requestScope.result}</p>
+    </c:if>
+    <c:if test="${requestScope.message_inp != null}">
+        <p align="center" style="color: dimgray">${requestScope.message_inp}</p>
+    </c:if>
+    <p align="center"><a href="/log">Get log by session</a></p>
+    <p align="center"><a href="/logOut">Log out</a></p>
+</div>
 </body>
 </html>

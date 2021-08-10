@@ -14,8 +14,10 @@
 <body>
 <h1 align="center">Sign in</h1>
 <form align="center" action="/login" method="post">
-    <input type="text" name="login" placeholder="login" required>
-    <input type="text" name="password" placeholder="password" required>
+    <label for="log">Login</label>
+    <input id="log" type="text" name="login" required>
+    <label for="pass"></label>
+    <input id="pass" type="text" name="password" required>
     <button type="submit">Sign in</button>
 </form>
 <c:if test="${requestScope.message_signIn != null}">

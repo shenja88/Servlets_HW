@@ -14,9 +14,12 @@
 <body>
 <h1 align="center">Registration</h1>
 <form align="center" action="/registration" method="post">
-    <input type="text" name="name" placeholder="name" required>
-    <input type="text" name="login" placeholder="login" required>
-    <input type="text" name="password" placeholder="password" required>
+    <label for="name">name</label>
+    <input id="name" type="text" name="name" required>
+    <label for="log">login</label>
+    <input id="log" type="text" name="login" required>
+    <label for="pass">password</label>
+    <input id="pass" type="text" name="password" required>
     <button type="submit">Get registration</button>
 </form>
 <c:if test="${requestScope.message_reg != null}">
