@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>SignIn</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 align="center">Registration</h1>
@@ -20,11 +21,11 @@
     <input id="log" type="text" name="login" required>
     <label for="pass">password</label>
     <input id="pass" type="text" name="password" required>
-    <button type="submit">Get registration</button>
+    <button class="button_submit" type="submit">Get registration</button>
 </form>
 <c:if test="${requestScope.message_reg != null}">
     <p align="center">${requestScope.message_reg}</p>
 </c:if>
-<p align="center"><a href="/main">Back to main</a></p>
+<a class="my_href" href="/main">Back to main</a>
 </body>
 </html>

@@ -1,0 +1,151 @@
+body {
+    background-image: url("https://r2.mt.ru/r5/photoD3AA/20239432810-0/jpeg/bp@2x.webp");
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Ebrima;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.button_submit {
+    position: relative;
+    top: 15px;
+    left: 20px;
+    height: 80px;
+    background-color: gold;
+    border: solid #959510 10px;
+    border-radius: 30px;
+    padding: 20px;
+    transition-duration: 0.3s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button_submit:hover {
+    background-color: goldenrod;
+    border: solid olive 10px;
+}
+
+.button_submit:active {
+    background-color: lawngreen;
+    border: solid #669a33 10px;
+    border-radius: 40px;
+    font-size: 25px;
+    padding: 15px;
+}
+
+form {
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    height: 15%;
+    width: 80%;
+    position: relative;
+    left: 8%;
+}
+
+.my_div {
+    display: block;
+    position: static;
+    cursor: pointer;
+}
+
+.my_href {
+    text-decoration: none;
+    position: relative;
+    left: 40%;
+    background-color: #eab972;
+    border: solid #c29333 10px;
+    border-radius: 30px;
+    color: black;
+    font: 20px Ebrima;
+    transition-duration: 0.3s;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.my_href:hover {
+    background-color: #e5ab50;
+    border: solid #aa7e1b 10px;
+    border-radius: 30px;
+}
+
+.my_href:active {
+    background-color: #c9d50a;
+    border: solid #749c33 10px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: rgba(238, 218, 158, 0.74);
+    border-radius: 30px;
+    transition-duration: 0.5s;
+}
+
+p {
+    position: relative;
+    left: 25%;
+    margin: 50px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    width: 40%;
+    transition-duration: 0.5s;
+}
+
+input {
+    border: solid black 1px;
+    border-radius: 20px;
+    transition-duration: 0.3s;
+    font-weight: bolder;
+}
+
+input:hover {
+    border: solid #003e8e 2px;
+    border-radius: 20px;
+}
+
+input:focus {
+    border: solid #003e8e 2px;
+    border-radius: 20px;
+}
+
+select{
+    border: solid black 1px;
+    border-radius: 20px;
+    background-color: khaki;
+    transition-duration: 0.3s;
+}
+
+ul{
+    border: 1px solid black;
+    list-style: none;
+    padding:0;
+    margin: 0;
+    position: relative;
+    width: 70%;
+    left: 15%;
+    cursor:default;
+}
+
+li{
+    background-color: rgba(255, 255, 255, 0.71);
+    border-bottom: 1px solid black;
+    text-align: left;
+    font-size: 20px;
+    padding: 0;
+    transition-duration: 0.5s;
+}
+
+li:hover {
+    background-color: rgba(212, 204, 35, 0.76);
+    font-size: 25px;
+    text-align: center;
+}

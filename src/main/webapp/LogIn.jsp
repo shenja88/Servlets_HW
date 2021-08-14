@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Sign in</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 align="center">Sign in</h1>
@@ -18,11 +19,11 @@
     <input id="log" type="text" name="login" required>
     <label for="pass"></label>
     <input id="pass" type="text" name="password" required>
-    <button type="submit">Sign in</button>
+    <button class="button_submit" type="submit">Sign in</button>
 </form>
 <c:if test="${requestScope.message_signIn != null}">
     <p align="center">${requestScope.message_signIn}</p>
 </c:if>
-<p align="center"><a href="/main">Back to main</a></p>
+<a class="my_href" href="/main">Back to main</a>
 </body>
 </html>

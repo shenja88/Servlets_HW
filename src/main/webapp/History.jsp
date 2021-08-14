@@ -9,6 +9,7 @@ To change this template use File | Settings | File Templates.
 <html>
 <head>
     <title>History</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 align="center">Session history</h1>
@@ -22,16 +23,16 @@ To change this template use File | Settings | File Templates.
             <option value="multiplication">multiplication</option>
             <option value="subtraction">subtraction</option>
         </select>
-    <button type="submit">Get log by operation</button>
+    <button class="button_submit" type="submit">Get log by operation</button>
 </form>
-<p align="center"><a href="/mathOperation">Back to calculator</a></p>
-<div align="center">
+<a class="my_href" href="/mathOperation">Back to calculator</a>
 <p>Operations</p>
+<div>
 <c:forEach var="math_operation" items="${requestScope.log_list}">
-    <ul style="list-style-type: unset">
-        <li>Num one: ${math_operation.numOne}.
-            Num two: ${math_operation.numTwo}.
-            Type operation: ${math_operation.typeOp}.
+    <ul>
+        <li>Num: ${math_operation.numOne}.
+            Num: ${math_operation.numTwo}.
+            Operation: ${math_operation.typeOp}.
             Result: ${math_operation.result}.
             Name: ${math_operation.user.name}.
         </li>

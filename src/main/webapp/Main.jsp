@@ -9,10 +9,13 @@
 <html>
 <head>
     <title>Main</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 align="center">Main menu</h1>
-<p align="center"><a href="/registration">Registration</a></p>
-<p align="center"><a href="/login"> Sign in</a></p>
+<div class="my_div">
+    <a class="my_href" href="/registration">Registration</a>
+    <a class="my_href" href="/login"> Sign in</a>
+</div>
 </body>
 </html>

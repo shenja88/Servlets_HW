@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1 align="center">Calculator</h1>
@@ -28,16 +29,18 @@
             <option value="multiplication">multiplication</option>
             <option value="subtraction">subtraction</option>
         </select>
-        <button type="submit">Calculate</button>
+        <button class="button_submit" type="submit">Calculate</button>
     </form>
     <c:if test="${requestScope.result != null}">
-        <p align="center" style="color: dimgray">Result: ${requestScope.result}</p>
+        <p>Result: ${requestScope.result}</p>
     </c:if>
     <c:if test="${requestScope.message_inp != null}">
-        <p align="center" style="color: dimgray">${requestScope.message_inp}</p>
+        <p>${requestScope.message_inp}</p>
     </c:if>
-    <p align="center"><a href="/log">Get log by session</a></p>
-    <p align="center"><a href="/logOut">Log out</a></p>
+    <div class="my_div">
+        <a class="my_href" href="/log">Get log by session</a>
+        <a class="my_href" href="/logOut">Log out</a>
+    </div>
 </div>
 </body>
 </html>
