@@ -29,10 +29,10 @@ public class LogInServlet extends HttpServlet {
         if(userDao.isExistUser(user)){
             User userAuth = userDao.getUsers().get(userDao.getUsers().indexOf(user));
             req.getSession().setAttribute("user", userAuth);
-            resp.sendRedirect("/mathOperation");
+            req.setAttribute("message_signIn","Log in successful!");
         }else{
             req.setAttribute("message_signIn","Invalid logIn!");
-            getServletContext().getRequestDispatcher("/LogIn.jsp").forward(req, resp);
         }
+        getServletContext().getRequestDispatcher("/LogIn.jsp").forward(req, resp);
     }
 }

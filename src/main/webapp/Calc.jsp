@@ -10,37 +10,56 @@
 <html>
 <head>
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<h1 align="center">Calculator</h1>
-<div>
-    <form align="center" action="/mathOperation" method="post">
-        <label for="num1">Number one</label>
-        <input id="num1" type="number" step="0.00001" name="num">
-        <label for="num2">Number two</label>
-        <input id="num2" type="number" step="0.00001" name="num">
-        <label for="oper">Operation</label>
-        <select id="oper" required name="operation" size="?">
-            <option disabled>Select operation</option>
-            <option value="addition">addition</option>
-            <option value="division">division</option>
-            <option value="modulo">modulo</option>
-            <option value="multiplication">multiplication</option>
-            <option value="subtraction">subtraction</option>
-        </select>
-        <button class="button_submit" type="submit">Calculate</button>
-    </form>
-    <c:if test="${requestScope.result != null}">
-        <p>Result: ${requestScope.result}</p>
-    </c:if>
-    <c:if test="${requestScope.message_inp != null}">
-        <p>${requestScope.message_inp}</p>
-    </c:if>
-    <div class="my_div">
-        <a class="my_href" href="/log">Get log by session</a>
-        <a class="my_href" href="/logOut">Log out</a>
+<jsp:include page="_header.jsp"/>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <form action="/mathOperation" method="post">
+                <fieldset>
+                        <div class="m-1">
+                            <label for="inputNum1" class="col-sm col-form-label">Number one</label>
+                            <input required type="number" step="0.0000000000001" name="num" class="form-control" id="inputNum1">
+                        </div>
+                        <div class="m-1">
+                            <label for="inputNum2" class="col-sm col-form-label">Number two</label>
+                            <input required type="number" step="0.000000000001" name="num" class="form-control" id="inputNum2">
+                        </div>
+                        <div class="m-1">
+                            <label for="selectOp" class="col-sm col-form-label">Type operation</label>
+                            <select name="operation" class="form-select form-select-sm-3"
+                                    aria-label=".form-select-sm example" id="selectOp">
+                                <option disabled>Select operation</option>
+                                <option value="addition">Addition</option>
+                                <option value="division">Division</option>
+                                <option value="modulo">Modulo</option>
+                                <option value="multiplication">Multiplication</option>
+                                <option value="subtraction">Subtraction</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary m-2">Calculate</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-5">
+            <c:if test="${requestScope.result != null}">
+                <div class="alert alert-info m-3" role="alert">
+                    Result: ${requestScope.result}
+                </div>
+            </c:if>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-5">
+            <c:if test="${requestScope.message_inp != null}">
+                <div class="alert alert-info m-3" role="alert">
+                        ${requestScope.message_inp}
+                </div>
+            </c:if>
+        </div>
     </div>
 </div>
-</body>
-</html>

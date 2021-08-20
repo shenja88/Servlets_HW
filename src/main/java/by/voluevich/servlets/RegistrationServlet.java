@@ -27,10 +27,10 @@ public class RegistrationServlet extends HttpServlet {
 
         UserDao userDao = new UserDaoImpl();
         if(userDao.addUser(new User(name, login, password))){
-            resp.sendRedirect("/Main.jsp");
+            req.setAttribute("message_reg","Registration successful!");
         } else{
             req.setAttribute("message_reg","Invalid registration.");
-            getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
         }
+        getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
     }
 }

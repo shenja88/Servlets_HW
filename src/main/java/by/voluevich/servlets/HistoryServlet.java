@@ -33,7 +33,7 @@ public class HistoryServlet extends HttpServlet {
         String typeOp = req.getParameter("type");
         HistoryQueriesDaoImpl log = new HistoryQueriesDaoImpl();
         if (CheckInput.isExistOperation(typeOp)) {
-            List<MathOperation> mathOperationList = log.getLogByType(typeOp);
+            List<MathOperation> mathOperationList = log.getLogByType(typeOp, (User) req.getSession().getAttribute("user"));
             req.setAttribute("log_list", mathOperationList);
             getServletContext().getRequestDispatcher("/History.jsp").forward(req, resp);
         }

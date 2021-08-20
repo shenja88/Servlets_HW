@@ -9,35 +9,49 @@ To change this template use File | Settings | File Templates.
 <html>
 <head>
     <title>History</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1 align="center">Session history</h1>
-<form align="center" action="/log" method="post">
-    <label for="type">Type operation</label>
-        <select id="type" name="type" size="?" required>
-            <option disabled>Select type operation</option>
-            <option value="addition">addition</option>
-            <option value="division">division</option>
-            <option value="modulo">modulo</option>
-            <option value="multiplication">multiplication</option>
-            <option value="subtraction">subtraction</option>
-        </select>
-    <button class="button_submit" type="submit">Get log by operation</button>
-</form>
-<a class="my_href" href="/mathOperation">Back to calculator</a>
-<p>Operations</p>
-<div>
-<c:forEach var="math_operation" items="${requestScope.log_list}">
-    <ul>
-        <li>Num: ${math_operation.numOne}.
-            Num: ${math_operation.numTwo}.
-            Operation: ${math_operation.typeOp}.
-            Result: ${math_operation.result}.
-            Name: ${math_operation.user.name}.
-        </li>
-    </ul>
-</c:forEach>
+<jsp:include page="_header.jsp"/>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <form action="/log" method="post">
+                <fieldset>
+                    <div class="mb-3">
+                        <select name="type" class="form-select form-select-sm-4"
+                                aria-label=".form-select-sm example">
+                            <option disabled>Select operation</option>
+                            <option value="addition">Addition</option>
+                            <option value="division">Division</option>
+                            <option value="modulo">Modulo</option>
+                            <option value="multiplication">Multiplication</option>
+                            <option value="subtraction">Subtraction</option>
+                        </select>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary m-3">Get operations</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <ol class="list-group list-group-numbered m-3">
+                <c:forEach var="math_operation" items="${requestScope.log_list}">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Operation: ${math_operation.typeOp}.</div>
+                            Num: ${math_operation.numOne}.
+                            Num: ${math_operation.numTwo}.
+                            Name: ${math_operation.user.name}.
+                        </div>
+                        <span class="badge bg-primary rounded-pill">Result: ${math_operation.result}.</span>
+                    </li>
+                </c:forEach>
+            </ol>
+        </div>
+    </div>
 </div>
 </body>
 </html>

@@ -1,37 +1,44 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: A E S T H E T I C
-  Date: 04.08.2021
-  Time: 21:09
+  Date: 19.08.2021
+  Time: 19:25
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Sign in</title>
+    <title>Account</title>
 </head>
 <body>
 <jsp:include page="_header.jsp"/>
 <div class="container">
-    <c:if test="${sessionScope.user == null}">
-        <div class="row justify-content-center">
-            <div class="col-sm-4">
-                <form action="/login" method="post">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" name="login">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <form action="/account" method="post">
+                <fieldset>
+                    <div class="mb-4">
+                        <label for="inputNum1" class="col-sm col-form-label">Enter old password</label>
+                        <input required type="password" name="oldPass" class="form-control"
+                               id="inputNum1">
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    <div class="m-1">
+                        <label for="inputNum" class="col-sm col-form-label">Enter new name</label>
+                        <input required type="text" name="newName" class="form-control"
+                               id="inputNum">
                     </div>
-                    <button type="submit" class="btn btn-primary">Log In!</button>
-                </form>
-            </div>
+                    <div class="m-1">
+                        <label for="inputNum2" class="col-sm col-form-label">Enter new password</label>
+                        <input required type="password" name="newPass" class="form-control"
+                               id="inputNum2">
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2">Submit</button>
+                </fieldset>
+            </form>
         </div>
-    </c:if>
-    <c:if test="${requestScope.message_signIn != null}">
+    </div>
+    <c:if test="${requestScope.message_acc != null}">
         <div class="row justify-content-center">
             <div class="col-sm-4">
                 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -50,7 +57,7 @@
                         <use href="#info-fill"></use>
                     </svg>
                     <div>
-                            ${requestScope.message_signIn}
+                            ${requestScope.message_acc}
                     </div>
                 </div>
             </div>

@@ -8,6 +8,7 @@ public class Addition implements Operation{
 
     @Override
     public MathOperation getCalculation(User user, double ... num) {
-        return new MathOperation(num[0], num[1], NAME, (num[0] + num[1]), user);
+        double result = getResultForOutput(num[0] + num[1]);
+        return new MathOperation(num[0], num[1], NAME, result, user);
     }
 }

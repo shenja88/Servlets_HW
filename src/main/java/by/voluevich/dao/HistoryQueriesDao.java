@@ -11,7 +11,7 @@ public interface HistoryQueriesDao {
 
     void addQuery(MathOperation mathOperation);
 
-    List<MathOperation> getLogByType(String operation);
+    List<MathOperation> getLogByType(String operation, User user);
 
     List<MathOperation> getLogBySession(User user);
 }

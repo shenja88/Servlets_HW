@@ -20,12 +20,12 @@ public class HistoryQueriesDaoImpl implements HistoryQueriesDao {
     }
 
     @Override
-    public List<MathOperation> getLogByType(String operation) {
+    public List<MathOperation> getLogByType(String operation, User user) {
         List<MathOperation> logByType = new ArrayList<>();
         Pattern pattern = Pattern.compile(operation);
         for (MathOperation s: log){
             Matcher matcher = pattern.matcher(s.getTypeOp());
-            if(matcher.find()){
+            if(matcher.find() && s.getUser().getName().equals(user.getName())){
                 logByType.add(s);
             }
         }
