@@ -14,18 +14,18 @@ public class CheckInput {
 
     public static boolean isExistOperation(String typeOp) {
         for (String s : OPERATION_LIST) {
-            if (Pattern.matches(s, typeOp)){
+            if (Pattern.matches(s, typeOp)) {
                 return true;
             }
         }
         return false;
     }
 
-    public static boolean checkDouble (String num){
+    public static boolean checkDouble(String num) {
         return Pattern.matches("^[0-9]*[.,]?[0-9]+$", num);
     }
 
-    public static boolean zeroDiv (double divisor, String operation){
+    public static boolean zeroDiv(double divisor, String operation) {
         return (divisor == 0 && operation.equals("division"));
     }
 }

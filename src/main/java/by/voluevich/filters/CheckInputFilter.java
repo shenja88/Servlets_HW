@@ -25,13 +25,13 @@ public class CheckInputFilter extends HttpFilter {
                 }
             }
             if (!check) {
-                req.setAttribute("message_inp","Error! Enter numerical values.");
+                req.setAttribute("message_inp", "Error! Enter numerical values.");
                 getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, res);
             }
 
             if (CheckInput.zeroDiv(Double.parseDouble(numStr[1]), typeOp)) {
                 check = false;
-                req.setAttribute("message_inp","Division by 0 is not possible");
+                req.setAttribute("message_inp", "Division by 0 is not possible");
                 getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, res);
             }
         }

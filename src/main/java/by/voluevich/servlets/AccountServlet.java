@@ -26,8 +26,11 @@ public class AccountServlet extends HttpServlet {
         String newPassword = req.getParameter("newPass");
         String newName = req.getParameter("newName");
 
-        String responseMessage = userDao.editUserInfo((User) req.getSession().getAttribute("user"), oldPassword, newPassword, newName);
-        req.setAttribute("message_acc", responseMessage);
+        if (userDao.editInfo((User) req.getSession().getAttribute("user"), oldPassword, newPassword, newName)) {
+            req.setAttribute("message_acc", "Successful!");
+        } else {
+            req.setAttribute("message_acc", "You entered the wrong old password!");
+        }
         getServletContext().getRequestDispatcher("/Account.jsp").forward(req, resp);
     }
 }

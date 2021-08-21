@@ -26,12 +26,12 @@ public class LogInServlet extends HttpServlet {
         String password = req.getParameter("password");
 
         User user = new User(login, password);
-        if(userDao.isExistUser(user)){
-            User userAuth = userDao.getUsers().get(userDao.getUsers().indexOf(user));
+        if (userDao.isExist(user)) {
+            User userAuth = userDao.getAll().get(userDao.getAll().indexOf(user));
             req.getSession().setAttribute("user", userAuth);
-            req.setAttribute("message_signIn","Log in successful!");
-        }else{
-            req.setAttribute("message_signIn","Invalid logIn!");
+            req.setAttribute("message_signIn", "Log in successful!");
+        } else {
+            req.setAttribute("message_signIn", "Invalid logIn!");
         }
         getServletContext().getRequestDispatcher("/LogIn.jsp").forward(req, resp);
     }

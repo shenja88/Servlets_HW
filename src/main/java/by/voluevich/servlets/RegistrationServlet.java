@@ -26,9 +26,11 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        String responseMessage = userDao.addUser(new User(name, login, password));
-
-        req.setAttribute("message_reg",responseMessage);
+        if (userDao.save(new User(name, login, password))) {
+            req.setAttribute("message_reg", "Registration successful!");
+        } else {
+            req.setAttribute("message_reg", "Invalid registration!");
+        }
         getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
     }
 }

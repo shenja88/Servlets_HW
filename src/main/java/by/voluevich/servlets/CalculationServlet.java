@@ -1,7 +1,6 @@
 package by.voluevich.servlets;
 
-import by.voluevich.dao.HistoryQueriesDaoImpl;
-import by.voluevich.entity.MathOperation;
+import by.voluevich.dao.MathOperationDaoImpl;
 import by.voluevich.entity.User;
 import by.voluevich.service.utils.Calculation;
 
@@ -14,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "CalculationServlet", urlPatterns = "/mathOperation")
 public class CalculationServlet extends HttpServlet {
-    private final Calculation calculation = new Calculation(new HistoryQueriesDaoImpl());
+    private final Calculation calculation = new Calculation(new MathOperationDaoImpl());
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, resp);

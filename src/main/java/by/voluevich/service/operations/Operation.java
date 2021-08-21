@@ -8,15 +8,19 @@ import java.math.RoundingMode;
 
 public interface Operation {
 
-    MathOperation getCalculation(User user, double ... num);
+    MathOperation getCalculation(User user, double... num);
 
     String getName();
 
-    default double getResultForOutput(double num){
+    default double getResultNumForResponse(double num) {
         double result;
         BigDecimal resultBD = new BigDecimal(num);
         resultBD = resultBD.setScale(3, RoundingMode.DOWN);
         result = resultBD.doubleValue();
         return result;
+    }
+
+    default MathOperation resultMathOperation(double num1, double num2, String typeOp, double result, User user) {
+        return new MathOperation(num1, num2, typeOp, result, user);
     }
 }
