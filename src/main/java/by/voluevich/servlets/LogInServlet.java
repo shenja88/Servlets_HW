@@ -13,6 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "LogInServlet", urlPatterns = "/login")
 public class LogInServlet extends HttpServlet {
+    private final UserDao userDao = new UserDaoImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,7 +25,6 @@ public class LogInServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        UserDao userDao = new UserDaoImpl();
         User user = new User(login, password);
         if(userDao.isExistUser(user)){
             User userAuth = userDao.getUsers().get(userDao.getUsers().indexOf(user));

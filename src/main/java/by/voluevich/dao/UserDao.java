@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface UserDao {
 
-    boolean addUser(User user);
+    String addUser(User user);
 
     boolean isExistUser(User user);
 
     List<User> getUsers();
+
+    String editUserInfo(User user, String oldPass, String newPass, String newName);
 }

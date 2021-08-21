@@ -6,24 +6,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
-    private static List<User> users = new ArrayList<>();
+    private static final List<User> USERS = new ArrayList<>();
 
     @Override
     public List<User> getUsers() {
-        return users;
+        return USERS;
     }
 
     @Override
-    public boolean addUser(User user) {
-        if (!isExistUser(user)) {
-            users.add(user);
-            return true;
+    public String editUserInfo(User user, String oldPass, String newPass, String newName) {
+        if(user.getPassword().equals(oldPass)){
+            user.setPassword(newPass);
+            user.setName(newName);
+            return "Successful!";
+        } else{
+            return "You entered the wrong old password!";
         }
-        return false;
+    }
+
+    @Override
+    public String addUser(User user) {
+        if (!isExistUser(user)) {
+            USERS.add(user);
+            return "Registration successful!";
+        }
+        return "Invalid registration!";
     }
 
     @Override
     public boolean isExistUser(User user) {
-        return users.contains(user);
+        return USERS.contains(user);
     }
 }

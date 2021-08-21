@@ -1,5 +1,6 @@
 package by.voluevich.servlets;
 
+import by.voluevich.dao.HistoryQueriesDaoImpl;
 import by.voluevich.entity.MathOperation;
 import by.voluevich.entity.User;
 import by.voluevich.service.utils.Calculation;
@@ -13,6 +14,7 @@ import java.io.IOException;
 
 @WebServlet(name = "CalculationServlet", urlPatterns = "/mathOperation")
 public class CalculationServlet extends HttpServlet {
+    private final Calculation calculation = new Calculation(new HistoryQueriesDaoImpl());
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, resp);
@@ -22,13 +24,10 @@ public class CalculationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String typeOp = req.getParameter("operation");
         String[] numStr = req.getParameterValues("num");
-        double[] nums = new double[numStr.length];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = Double.parseDouble(numStr[i]);
-        }
 
-        MathOperation result = Calculation.getResult((User) req.getSession().getAttribute("user"), typeOp, nums);
-        req.setAttribute("result", result.getResult());
+        double result = calculation.getResult((User) req.getSession().getAttribute("user"), typeOp, numStr);
+
+        req.setAttribute("result", result);
         getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, resp);
     }
 }

@@ -13,6 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "RegistrationServlet", urlPatterns = "/registration")
 public class RegistrationServlet extends HttpServlet {
+    private final UserDao userDao = new UserDaoImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -25,12 +26,9 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        UserDao userDao = new UserDaoImpl();
-        if(userDao.addUser(new User(name, login, password))){
-            req.setAttribute("message_reg","Registration successful!");
-        } else{
-            req.setAttribute("message_reg","Invalid registration.");
-        }
+        String responseMessage = userDao.addUser(new User(name, login, password));
+
+        req.setAttribute("message_reg",responseMessage);
         getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
     }
 }

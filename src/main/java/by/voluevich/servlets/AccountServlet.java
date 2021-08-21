@@ -1,5 +1,7 @@
 package by.voluevich.servlets;
 
+import by.voluevich.dao.UserDao;
+import by.voluevich.dao.UserDaoImpl;
 import by.voluevich.entity.User;
 
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "AccountServlet", urlPatterns = "/account")
 public class AccountServlet extends HttpServlet {
+    private final UserDao userDao = new UserDaoImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,15 +26,8 @@ public class AccountServlet extends HttpServlet {
         String newPassword = req.getParameter("newPass");
         String newName = req.getParameter("newName");
 
-        User thisUser = (User) req.getSession().getAttribute("user");
-
-        if (thisUser.getPassword().equals(oldPassword)) {
-            thisUser.setPassword(newPassword);
-            thisUser.setName(newName);
-            req.setAttribute("message_acc", "Successful!");
-        } else {
-            req.setAttribute("message_acc", "You entered the wrong old password!");
-        }
+        String response = userDao.editUserInfo((User) req.getSession().getAttribute("user"), oldPassword, newPassword, newName);
+        req.setAttribute("message_acc", response);
         getServletContext().getRequestDispatcher("/Account.jsp").forward(req, resp);
     }
 }

@@ -10,6 +10,8 @@ public interface Operation {
 
     MathOperation getCalculation(User user, double ... num);
 
+    String getName();
+
     default double getResultForOutput(double num){
         double result;
         BigDecimal resultBD = new BigDecimal(num);

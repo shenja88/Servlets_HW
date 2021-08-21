@@ -9,35 +9,39 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HistoryQueriesDaoImpl implements HistoryQueriesDao {
-    private static List<MathOperation> log = new ArrayList<>();
+    private static final List<MathOperation> OPERATIONS = new ArrayList<>();
 
     public List<MathOperation> getLog() {
-        return log;
+        return OPERATIONS;
     }
 
     public void addQuery(MathOperation mathOperation){
-        log.add(mathOperation);
+        OPERATIONS.add(mathOperation);
     }
 
     @Override
     public List<MathOperation> getLogByType(String operation, User user) {
         List<MathOperation> logByType = new ArrayList<>();
         Pattern pattern = Pattern.compile(operation);
-        for (MathOperation s: log){
-            Matcher matcher = pattern.matcher(s.getTypeOp());
-            if(matcher.find() && s.getUser().getName().equals(user.getName())){
-                logByType.add(s);
+        for (MathOperation mathOperation: OPERATIONS){
+            Matcher matcher = pattern.matcher(mathOperation.getTypeOp());
+            if(matcher.find() && nameMath(mathOperation.getUser(), user)){
+                logByType.add(mathOperation);
             }
         }
         return logByType;
     }
 
+    private boolean nameMath (User thisUser, User userInLog){
+        return userInLog.getName().equals(thisUser.getName());
+    }
+
     @Override
     public List<MathOperation> getLogBySession(User user) {
         List<MathOperation> mathOperations = new ArrayList<>();
-        for (MathOperation m: log){
-            if(m.getUser().equals(user)){
-                mathOperations.add(m);
+        for (MathOperation mathOperation: OPERATIONS){
+            if(mathOperation.getUser().equals(user)){
+                mathOperations.add(mathOperation);
             }
         }
         return mathOperations;
