@@ -3,6 +3,7 @@ package by.voluevich.servlets;
 import by.voluevich.dao.MathOperationDaoImpl;
 import by.voluevich.entity.User;
 import by.voluevich.service.utils.Calculation;
+import by.voluevich.service.utils.CheckInput;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,8 +24,9 @@ public class CalculationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String typeOp = req.getParameter("operation");
         String[] numStr = req.getParameterValues("num");
+        double[] nums = CheckInput.parseToDouble(numStr);
 
-        double result = calculation.getResult((User) req.getSession().getAttribute("user"), typeOp, numStr);
+        double result = calculation.getResult((User) req.getSession().getAttribute("user"), typeOp, nums);
 
         req.setAttribute("result", result);
         getServletContext().getRequestDispatcher("/Calc.jsp").forward(req, resp);

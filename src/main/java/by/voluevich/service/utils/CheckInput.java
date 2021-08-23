@@ -28,5 +28,13 @@ public class CheckInput {
     public static boolean zeroDiv(double divisor, String operation) {
         return (divisor == 0 && operation.equals("division"));
     }
+
+    public static double[] parseToDouble(String[] numStr) {
+        double[] nums = new double[numStr.length];
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = Double.parseDouble(numStr[i]);
+        }
+        return nums;
+    }
 }
 
