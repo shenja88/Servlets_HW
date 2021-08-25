@@ -16,21 +16,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-4">
-            <form action="/account" method="post">
+            <form action="/editName" method="post">
                 <fieldset>
-                    <div class="mb-4">
-                        <label for="inputNum1" class="col-sm col-form-label">Enter old password</label>
-                        <input required type="password" name="oldPass" class="form-control"
-                               id="inputNum1">
-                    </div>
                     <div class="m-1">
-                        <label for="inputNum" class="col-sm col-form-label">Enter new name</label>
+                        <label for="inputNum2" class="col-sm col-form-label">Enter new name</label>
                         <input required type="text" name="newName" class="form-control"
-                               id="inputNum">
-                    </div>
-                    <div class="m-1">
-                        <label for="inputNum2" class="col-sm col-form-label">Enter new password</label>
-                        <input required type="password" name="newPass" class="form-control"
                                id="inputNum2">
                     </div>
                     <button type="submit" class="btn btn-primary m-2">Submit</button>

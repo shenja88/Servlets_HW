@@ -14,17 +14,6 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean editInfo(User user, String oldPass, String newPass, String newName) {
-        if (user.getPassword().equals(oldPass)) {
-            user.setPassword(newPass);
-            user.setName(newName);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
     public boolean save(User user) {
         if (!isExist(user)) {
             USERS.add(user);

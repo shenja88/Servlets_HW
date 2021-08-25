@@ -12,5 +12,4 @@ public interface UserDao {
 
     List<User> getAll();
 
-    boolean editInfo(User user, String oldPass, String newPass, String newName);
 }

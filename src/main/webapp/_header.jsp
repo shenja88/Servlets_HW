@@ -45,7 +45,9 @@
                              alt="mdo" width="45" height="45" class="rounded">
                     </a>
                     <ul class="dropdown-menu text-big" aria-labelledby="dropdownUser1" style="">
-                        <li><a href="/account" class="nav-link px-2 link-dark">Edit account</a></li>
+                        <li><a href="/editPassword" class="nav-link px-2 link-dark">Edit password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="/editName" class="nav-link px-2 link-dark">Edit name</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a href="/logOut" class="nav-link px-2 link-dark">Log out</a></li>
                     </ul>

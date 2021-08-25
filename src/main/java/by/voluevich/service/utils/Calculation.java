@@ -29,26 +29,29 @@ public class Calculation {
     public Calculation() {
     }
 
-    public MathOperationDao getHistoryQueriesDao() {
+    public MathOperationDao getMathOperationDao() {
         return mathOperationDao;
     }
 
-    public double getResult(User user, String typeOp, double... nums) {
+    public void setMathOperationDao(MathOperationDao mathOperationDao) {
+        this.mathOperationDao = mathOperationDao;
+    }
+
+    public List<Operation> getOperationList() {
+        return operationList;
+    }
+
+    public Optional<MathOperation> getResult(User user, String typeOp, double... nums) {
         Optional<Operation> operation = getTypeOperation(typeOp);
         if (operation.isPresent()) {
             MathOperation mathOperation = operation.get().getCalculation(user, nums);
-            recordToHistory(mathOperation);
-            return mathOperation.getResult();
+            return Optional.of(mathOperation);
         } else {
-            return -1;
+            return Optional.empty();
         }
     }
 
     private Optional<Operation> getTypeOperation(String type) {
         return operationList.stream().filter(x -> x.getName().equals(type)).findFirst();
-    }
-
-    private void recordToHistory(MathOperation mathOperation) {
-        mathOperationDao.save(mathOperation);
     }
 }

@@ -1,8 +1,7 @@
 package by.voluevich.servlets;
 
-import by.voluevich.dao.UserDao;
-import by.voluevich.dao.UserDaoImpl;
 import by.voluevich.entity.User;
+import by.voluevich.service.SessionFacade;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,11 +12,11 @@ import java.io.IOException;
 
 @WebServlet(name = "RegistrationServlet", urlPatterns = "/registration")
 public class RegistrationServlet extends HttpServlet {
-    private final UserDao userDao = new UserDaoImpl();
+    private final SessionFacade sessionFacade = new SessionFacade();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
     }
 
     @Override
@@ -26,11 +25,11 @@ public class RegistrationServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        if (userDao.save(new User(name, login, password))) {
+        if (sessionFacade.getRegistration(new User(name, login, password))) {
             req.setAttribute("message_reg", "Registration successful!");
         } else {
             req.setAttribute("message_reg", "Invalid registration!");
         }
-        getServletContext().getRequestDispatcher("/Registration.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
     }
 }
