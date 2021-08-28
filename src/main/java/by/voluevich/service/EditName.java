@@ -1,6 +1,5 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
-import by.voluevich.dao.UserDao;
 import by.voluevich.entity.User;
 
 public class EditName {

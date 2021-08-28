@@ -2,6 +2,8 @@ package by.voluevich.servlets;
 
 import by.voluevich.entity.User;
 import by.voluevich.service.SessionFacade;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +14,7 @@ import java.io.IOException;
 
 @WebServlet(name = "EditPasswordServlet", urlPatterns = "/editPassword")
 public class EditPasswordServlet extends HttpServlet {
+    private final Logger logger = LoggerFactory.getLogger(EditPasswordServlet.class.getName());
     private final SessionFacade sessionFacade = new SessionFacade();
 
     @Override
@@ -24,12 +27,15 @@ public class EditPasswordServlet extends HttpServlet {
         String oldPassword = req.getParameter("oldPass");
         String newPassword = req.getParameter("newPass");
 
-        String message = sessionFacade.editPassword(
-                (User) req.getSession().getAttribute("user"),
-                oldPassword,
-                newPassword);
+        User user = (User) req.getSession().getAttribute("user");
 
-        req.setAttribute("message_acc", message);
+        if (sessionFacade.editPassword(user, oldPassword, newPassword)) {
+            req.setAttribute("message_acc", "Successful!");
+        } else {
+            req.setAttribute("message_acc", "You entered the wrong old password or new password is the same as the old one!");
+        }
+
+        logger.info("Request to edit password for user - {}", user.getName());
         getServletContext().getRequestDispatcher("/editPassword.jsp").forward(req, resp);
     }
 }

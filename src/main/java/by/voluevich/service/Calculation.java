@@ -1,4 +1,4 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
 import by.voluevich.dao.MathOperationDao;
 import by.voluevich.entity.MathOperation;
@@ -41,7 +41,7 @@ public class Calculation {
         return operationList;
     }
 
-    public Optional<MathOperation> getResult(User user, String typeOp, double... nums) {
+    public Optional<MathOperation> getResultMathOperation(User user, String typeOp, double... nums) {
         Optional<Operation> operation = getTypeOperation(typeOp);
         if (operation.isPresent()) {
             MathOperation mathOperation = operation.get().getCalculation(user, nums);

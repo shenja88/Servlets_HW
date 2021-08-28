@@ -1,4 +1,4 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
 import by.voluevich.dao.MathOperationDao;
 import by.voluevich.entity.MathOperation;
@@ -21,7 +21,7 @@ public class RecordMathOperation {
         this.mathOperationDao = mathOperationDao;
     }
 
-    public void record(MathOperation mathOperation){
+    public void record(MathOperation mathOperation) {
         mathOperationDao.save(mathOperation);
     }
 }

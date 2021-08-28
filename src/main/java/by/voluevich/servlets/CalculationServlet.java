@@ -2,7 +2,7 @@ package by.voluevich.servlets;
 
 import by.voluevich.entity.User;
 import by.voluevich.service.SessionFacade;
-import by.voluevich.service.utils.CheckInput;
+import by.voluevich.service.CheckInput;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

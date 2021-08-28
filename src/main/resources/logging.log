@@ -1,0 +1,47 @@
+2021-08-27 22:59:41 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-27 22:59:49 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - Alya.
+2021-08-27 22:59:53 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Failed registration attempt.
+2021-08-27 22:59:58 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - Alya.
+2021-08-27 23:00:09 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-27 23:00:16 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.EditNameServlet - Successful edit name attempt.
+2021-08-27 23:00:22 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.EditPasswordServlet - Request to edit password for user - Eugene
+2021-08-27 23:00:28 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.EditPasswordServlet - Request to edit password for user - Eugene
+2021-08-27 23:00:30 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.LogOutServlet - End session user - Eugene.
+2021-08-27 23:01:24 [http-nio-8080-exec-5] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-27 23:02:45 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-27 23:02:46 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Failed registration attempt.
+2021-08-27 23:02:49 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-27 23:02:51 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-27 23:02:58 [http-nio-8080-exec-8] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-27 23:03:22 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-27 23:03:25 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (45.0,55.0) and result(100.0) for user alex.
+2021-08-27 23:31:00 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.EditPasswordServlet - Request to edit password for user - alex
+2021-08-27 23:31:06 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.EditPasswordServlet - Request to edit password for user - alex
+2021-08-27 23:31:11 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.EditNameServlet - Successful edit name attempt.
+2021-08-27 23:31:16 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (34.0,3.0) and result(37.0) for user Eugene.
+2021-08-27 23:31:18 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.LogOutServlet - End session user - Eugene.
+2021-08-28 15:37:24 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-28 15:38:39 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-28 15:38:40 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-28 15:38:44 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-28 15:43:31 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-28 15:43:38 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,5.0) and result(30.0) for user alex.
+2021-08-28 15:43:57 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-28 15:51:32 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-28 15:55:40 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.LogInServlet - Login attempt failed.
+2021-08-28 15:55:46 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - eugene.
+2021-08-28 15:55:48 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - eugene.
+2021-08-28 15:55:52 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (45.0,5.0) and result(50.0) for user eugene.
+2021-08-28 15:55:54 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (34.0,3.0) and result(37.0) for user eugene.
+2021-08-28 15:55:57 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.EditNameServlet - Successful edit name attempt.
+2021-08-28 15:55:59 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.LogOutServlet - End session user - Eugene.
+2021-08-28 15:58:22 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-28 15:58:24 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-28 15:58:30 [http-nio-8080-exec-6] INFO  by.voluevich.filters.CheckInputFilter - Attempting to divide by 0
+2021-08-28 18:58:14 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-28 18:58:27 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-28 18:58:30 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Failed registration attempt.
+2021-08-28 18:58:34 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-28 18:58:39 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-28 18:58:39 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-28 18:58:43 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.

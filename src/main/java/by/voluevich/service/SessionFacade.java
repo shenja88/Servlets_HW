@@ -1,74 +1,66 @@
 package by.voluevich.service;
 
-import by.voluevich.dao.MathOperationDaoImpl;
-import by.voluevich.dao.UserDaoImpl;
 import by.voluevich.entity.MathOperation;
 import by.voluevich.entity.User;
-import by.voluevich.service.utils.*;
+import by.voluevich.service.dependencies.DependenciesService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
 
 public class SessionFacade {
-    private final Calculation calculation = new Calculation(new MathOperationDaoImpl());
-    private final EditName editName = new EditName();
-    private final EditPassword editPassword = new EditPassword();
-    private final LogIn logIn = new LogIn(new UserDaoImpl());
-    private final MathOperationHistory mathOperationHistory = new MathOperationHistory(new MathOperationDaoImpl());
-    private final RecordMathOperation recordMathOperation = new RecordMathOperation(new MathOperationDaoImpl());
-    private final Registration registration = new Registration(new UserDaoImpl());
-    private final MathOperationLog mathOperationLog = new MathOperationLog();
+    private final Logger logger = LoggerFactory.getLogger(SessionFacade.class.getName());
 
     public double calculate(User user, String typeOp, double... nums) {
-        Optional<MathOperation> mathOperation = calculation.getResult(user, typeOp, nums);
+        Optional<MathOperation> mathOperation = DependenciesService.calculation.getResultMathOperation(user, typeOp, nums);
         if (mathOperation.isPresent()) {
-            recordMathOperation.record(mathOperation.get());
-            return mathOperation.get().getResult();
+            DependenciesService.recordMathOperation.record(mathOperation.get());
+            double resultNum = mathOperation.get().getResult();
+            logger.debug("Successful request to operation ({}) with num ({},{}) and result({}) for user {}.",
+                    typeOp, nums[0], nums[1], resultNum, user.getName());
+            return resultNum;
         } else {
+            logger.warn("Request to operation ({}) with num ({},{}) and result({}) for user {}.",
+                    typeOp, nums[0], nums[1], -1, user.getName());
             return -1;
         }
     }
 
     public boolean editName(User user, String newName) {
-        return editName.editName(user, newName);
+        return DependenciesService.editName.editName(user, newName);
     }
 
-    public String editPassword(User user, String oldPass, String newPass) {
-        if (editPassword.checkNewPass(user, newPass)) {
-            if (editPassword.editPassword(user, oldPass, newPass)) {
-                return "Successful!";
-            } else {
-                return "You entered the wrong old password!";
-            }
+    public boolean editPassword(User user, String oldPass, String newPass) {
+        if (DependenciesService.editPassword.checkNewPass(user, newPass)) {
+            return DependenciesService.editPassword.editPassword(user, oldPass, newPass);
         } else {
-            return "The old password is the same as the new password!";
+            return false;
         }
     }
 
     public List<MathOperation> getLogBySession(User user) {
-        return mathOperationHistory.getBySession(user);
+        return DependenciesService.mathOperationHistory.getBySession(user);
     }
 
     public List<MathOperation> getLogByType(String type, User user) {
-        return mathOperationHistory.getByType(type, user);
+        return DependenciesService.mathOperationHistory.getByType(type, user);
     }
 
     public boolean getRegistration(User user) {
-        return registration.save(user);
+        return DependenciesService.registration.save(user);
     }
 
-    public Optional<User> getLogIn(User user){
-        return logIn.logIn(user);
+    public Optional<User> getLogIn(User user) {
+        return DependenciesService.logIn.logIn(user);
     }
-
-
 
 
     public List<List<MathOperation>> getLogBySession2(int numCurrentPage, int numValuesPage, User user) {
-        return mathOperationLog.listForResponseBySession(numCurrentPage, numValuesPage, user);
+        return DependenciesService.mathOperationLog.listForResponseBySession(numCurrentPage, numValuesPage, user);
     }
 
     public List<List<MathOperation>> getLogByType2(int numCurrentPage, int numValuesPage, String type, User user) {
-        return mathOperationLog.listForResponseByType(numCurrentPage, numValuesPage, type, user);
+        return DependenciesService.mathOperationLog.listForResponseByType(numCurrentPage, numValuesPage, type, user);
     }
 }

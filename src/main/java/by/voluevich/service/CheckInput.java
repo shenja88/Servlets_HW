@@ -1,4 +1,4 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
 import java.util.Arrays;
 import java.util.List;

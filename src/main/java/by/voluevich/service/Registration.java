@@ -1,4 +1,4 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
 import by.voluevich.dao.UserDao;
 import by.voluevich.entity.User;
@@ -21,7 +21,7 @@ public class Registration {
         this.userDao = userDao;
     }
 
-    public boolean save(User user){
+    public boolean save(User user) {
         return userDao.save(user);
     }
 }

@@ -1,6 +1,8 @@
 package by.voluevich.filters;
 
-import by.voluevich.service.utils.CheckInput;
+import by.voluevich.service.CheckInput;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import java.io.IOException;
 
 @WebFilter(servletNames = "CalculationServlet")
 public class CheckInputFilter extends HttpFilter {
+    Logger logger = LoggerFactory.getLogger(CheckInputFilter.class.getName());
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
@@ -32,6 +35,7 @@ public class CheckInputFilter extends HttpFilter {
             if (CheckInput.zeroDiv(Double.parseDouble(numStr[1]), typeOp)) {
                 check = false;
                 req.setAttribute("message_inp", "Division by 0 is not possible");
+                logger.info("Attempting to divide by 0");
                 getServletContext().getRequestDispatcher("/calc.jsp").forward(req, res);
             }
         }

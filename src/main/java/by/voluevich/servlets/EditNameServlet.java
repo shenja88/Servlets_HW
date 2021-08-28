@@ -2,6 +2,8 @@ package by.voluevich.servlets;
 
 import by.voluevich.entity.User;
 import by.voluevich.service.SessionFacade;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +14,7 @@ import java.io.IOException;
 
 @WebServlet(name = "EditNameServlet", urlPatterns = "/editName")
 public class EditNameServlet extends HttpServlet {
+    private final Logger logger = LoggerFactory.getLogger(EditNameServlet.class.getName());
     private final SessionFacade sessionFacade = new SessionFacade();
 
     @Override
@@ -25,8 +28,10 @@ public class EditNameServlet extends HttpServlet {
 
         if (sessionFacade.editName((User) req.getSession().getAttribute("user"), newName)) {
             req.setAttribute("message_acc", "Successful!");
+            logger.info("Successful edit name attempt.");
         } else {
             req.setAttribute("message_acc", "The new name cannot be the same as the old one!");
+            logger.info("Failed edit name attempt.");
         }
         getServletContext().getRequestDispatcher("/editName.jsp").forward(req, resp);
     }

@@ -1,4 +1,4 @@
-package by.voluevich.service.utils;
+package by.voluevich.service;
 
 import by.voluevich.dao.MathOperationDao;
 import by.voluevich.entity.MathOperation;
