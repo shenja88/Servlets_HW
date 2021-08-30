@@ -16,7 +16,7 @@
 <div class="container">
     <c:if test="${sessionScope.user == null}">
         <div class="row justify-content-center">
-            <div class="col-sm-4">
+            <div class="col-sm-4 m5 bg-success p-2 text-dark bg-opacity-10 rounded">
                 <form action="/login" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>

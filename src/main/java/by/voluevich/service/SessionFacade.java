@@ -2,7 +2,7 @@ package by.voluevich.service;
 
 import by.voluevich.entity.MathOperation;
 import by.voluevich.entity.User;
-import by.voluevich.service.dependencies.DependenciesService;
+import by.voluevich.service.dependencies.ServiceDependencies;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,9 +13,9 @@ public class SessionFacade {
     private final Logger logger = LoggerFactory.getLogger(SessionFacade.class.getName());
 
     public double calculate(User user, String typeOp, double... nums) {
-        Optional<MathOperation> mathOperation = DependenciesService.calculation.getResultMathOperation(user, typeOp, nums);
+        Optional<MathOperation> mathOperation = ServiceDependencies.calculation.getResultMathOperation(user, typeOp, nums);
         if (mathOperation.isPresent()) {
-            DependenciesService.recordMathOperation.record(mathOperation.get());
+            ServiceDependencies.recordMathOperation.record(mathOperation.get());
             double resultNum = mathOperation.get().getResult();
             logger.debug("Successful request to operation ({}) with num ({},{}) and result({}) for user {}.",
                     typeOp, nums[0], nums[1], resultNum, user.getName());
@@ -28,39 +28,23 @@ public class SessionFacade {
     }
 
     public boolean editName(User user, String newName) {
-        return DependenciesService.editName.editName(user, newName);
+        return ServiceDependencies.editName.editName(user, newName);
     }
 
     public boolean editPassword(User user, String oldPass, String newPass) {
-        if (DependenciesService.editPassword.checkNewPass(user, newPass)) {
-            return DependenciesService.editPassword.editPassword(user, oldPass, newPass);
+        if (ServiceDependencies.editPassword.checkNewPass(user, newPass)) {
+            return ServiceDependencies.editPassword.editPassword(user, oldPass, newPass);
         } else {
             return false;
         }
     }
 
-    public List<MathOperation> getLogBySession(User user) {
-        return DependenciesService.mathOperationHistory.getBySession(user);
-    }
-
-    public List<MathOperation> getLogByType(String type, User user) {
-        return DependenciesService.mathOperationHistory.getByType(type, user);
-    }
-
     public boolean getRegistration(User user) {
-        return DependenciesService.registration.save(user);
+        return ServiceDependencies.registration.save(user);
     }
 
     public Optional<User> getLogIn(User user) {
-        return DependenciesService.logIn.logIn(user);
+        return ServiceDependencies.logIn.logIn(user);
     }
 
-
-    public List<List<MathOperation>> getLogBySession2(int numCurrentPage, int numValuesPage, User user) {
-        return DependenciesService.mathOperationLog.listForResponseBySession(numCurrentPage, numValuesPage, user);
-    }
-
-    public List<List<MathOperation>> getLogByType2(int numCurrentPage, int numValuesPage, String type, User user) {
-        return DependenciesService.mathOperationLog.listForResponseByType(numCurrentPage, numValuesPage, type, user);
-    }
 }

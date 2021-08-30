@@ -1,4 +1,4 @@
-package by.voluevich.service.ValueListHandler;
+package by.voluevich.service.valueListHandler;
 
 import java.util.List;
 
@@ -12,5 +12,4 @@ public interface ValueListIterator<T> {
 
     List<T> getNextElements(int numCurrentPage, int numValuesPage);
 
-    void setIndex(int numCurrentPage, int numValuesPage);
 }

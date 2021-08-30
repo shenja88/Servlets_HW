@@ -45,3 +45,444 @@
 2021-08-28 18:58:39 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
 2021-08-28 18:58:39 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
 2021-08-28 18:58:43 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-29 17:48:16 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 17:48:23 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 17:48:26 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.RegistrationServlet - Failed registration attempt.
+2021-08-29 17:48:29 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 17:48:36 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (23.2,34.2) and result(793.44) for user alex.
+2021-08-29 17:48:40 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (23.0,3.0) and result(2.0) for user alex.
+2021-08-29 17:48:42 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 17:49:40 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-29 18:17:30 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 18:17:30 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Failed registration attempt.
+2021-08-29 18:17:32 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 18:17:37 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,33.0) and result(56.0) for user alex.
+2021-08-29 18:17:42 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11.0,22.0) and result(33.0) for user alex.
+2021-08-29 18:17:44 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,44.0) and result(67.0) for user alex.
+2021-08-29 18:17:47 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,55.0) and result(80.0) for user alex.
+2021-08-29 18:17:51 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (54.0,12.0) and result(66.0) for user alex.
+2021-08-29 18:17:52 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 18:17:59 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (23.0,3.0) and result(69.0) for user alex.
+2021-08-29 18:18:04 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (23.0,3.0) and result(69.0) for user alex.
+2021-08-29 18:18:10 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (15.0,7.0) and result(105.0) for user alex.
+2021-08-29 18:18:17 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11.0,1.2) and result(12.199) for user alex.
+2021-08-29 18:18:21 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 18:18:26 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,2.0) and result(22.0) for user alex.
+2021-08-29 18:18:33 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (67.0,5.0) and result(13.4) for user alex.
+2021-08-29 18:18:38 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (67.0,6.0) and result(61.0) for user alex.
+2021-08-29 18:18:39 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 18:23:55 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 18:23:57 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 18:24:00 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 18:24:02 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,33.0) and result(56.0) for user alex.
+2021-08-29 18:24:05 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (17.0,66.0) and result(83.0) for user alex.
+2021-08-29 18:24:07 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (14.0,5.0) and result(19.0) for user alex.
+2021-08-29 18:24:11 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (14.0,4.0) and result(18.0) for user alex.
+2021-08-29 18:24:15 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (4.0,5.0) and result(20.0) for user alex.
+2021-08-29 18:24:19 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (6.0,78.0) and result(468.0) for user alex.
+2021-08-29 18:24:23 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (14.0,23.0) and result(322.0) for user alex.
+2021-08-29 18:24:27 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,12.0) and result(132.0) for user alex.
+2021-08-29 18:24:28 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 18:24:34 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,23.0) and result(253.0) for user alex.
+2021-08-29 18:24:39 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (19.0,4.0) and result(3.0) for user alex.
+2021-08-29 18:24:45 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (52.0,7.0) and result(3.0) for user alex.
+2021-08-29 18:24:47 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 20:26:57 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 20:26:58 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 20:27:01 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 20:27:04 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 20:27:05 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-29 20:27:07 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 20:27:10 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,2.0) and result(27.0) for user alex.
+2021-08-29 20:27:13 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,2.0) and result(27.0) for user alex.
+2021-08-29 20:27:17 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (12.0,2.0) and result(6.0) for user alex.
+2021-08-29 20:27:21 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (16.0,4.0) and result(4.0) for user alex.
+2021-08-29 20:27:27 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (11.0,1.2) and result(9.166) for user alex.
+2021-08-29 20:27:33 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (12.0,5.0) and result(2.399) for user alex.
+2021-08-29 20:27:34 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 20:27:45 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (18.0,2.0) and result(9.0) for user alex.
+2021-08-29 20:27:50 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (13.0,2.0) and result(11.0) for user alex.
+2021-08-29 20:27:55 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (23.0,31.0) and result(-8.0) for user alex.
+2021-08-29 20:31:42 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 20:31:45 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (26.0,2.0) and result(28.0) for user alex.
+2021-08-29 20:31:48 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (26.0,2.0) and result(28.0) for user alex.
+2021-08-29 20:52:26 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 20:52:29 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 20:52:32 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 20:52:35 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 20:52:37 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,2.0) and result(27.0) for user alex.
+2021-08-29 20:52:40 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25235.0,254542.0) and result(279777.0) for user alex.
+2021-08-29 20:52:42 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1.0,2.0) and result(3.0) for user alex.
+2021-08-29 20:52:44 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (234.0,42.0) and result(276.0) for user alex.
+2021-08-29 20:52:47 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (424.0,2.0) and result(212.0) for user alex.
+2021-08-29 20:52:51 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (242.0,33.0) and result(7.333) for user alex.
+2021-08-29 20:52:54 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,324.0) and result(648.0) for user alex.
+2021-08-29 20:52:56 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,34.0) and result(358.0) for user alex.
+2021-08-29 20:52:59 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (342.0,3.0) and result(114.0) for user alex.
+2021-08-29 20:53:03 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (32432.0,34.0) and result(953.882) for user alex.
+2021-08-29 20:53:05 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,3.0) and result(327.0) for user alex.
+2021-08-29 20:53:08 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (324.0,324.0) and result(104976.0) for user alex.
+2021-08-29 20:53:10 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (234.0,33.0) and result(267.0) for user alex.
+2021-08-29 21:01:21 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 21:01:25 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 21:01:28 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 21:01:31 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 21:01:34 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,24.0) and result(47.0) for user alex.
+2021-08-29 21:01:37 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (24.0,424.0) and result(0.056) for user alex.
+2021-08-29 21:01:40 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (242.0,44424.0) and result(242.0) for user alex.
+2021-08-29 21:01:44 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (242424.0,444.0) and result(0.0) for user alex.
+2021-08-29 21:01:49 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (2424.0,424.0) and result(1027776.0) for user alex.
+2021-08-29 21:01:52 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (242.0,2.0) and result(484.0) for user alex.
+2021-08-29 21:01:56 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (2423.0,23231.0) and result(-20808.0) for user alex.
+2021-08-29 21:01:58 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,23.0) and result(46.0) for user alex.
+2021-08-29 21:02:00 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (21.0,1.0) and result(22.0) for user alex.
+2021-08-29 21:02:03 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (234.0,2.0) and result(117.0) for user alex.
+2021-08-29 21:02:07 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (2323.0,24.0) and result(19.0) for user alex.
+2021-08-29 21:02:07 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 21:02:13 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2423.0,234.0) and result(2657.0) for user alex.
+2021-08-29 21:02:15 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 21:47:00 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 21:47:04 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 21:47:06 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 21:47:09 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 21:47:11 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 21:47:14 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (24.0,4.0) and result(6.0) for user alex.
+2021-08-29 21:47:17 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (242423.0,23.0) and result(3.0) for user alex.
+2021-08-29 21:47:20 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (2424.0,24.0) and result(58176.0) for user alex.
+2021-08-29 21:47:23 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (242.0,24.0) and result(2.0) for user alex.
+2021-08-29 21:47:24 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2423.0,23.0) and result(2446.0) for user alex.
+2021-08-29 21:47:28 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (2424.0,24.0) and result(58176.0) for user alex.
+2021-08-29 21:47:31 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (22424.0,23.0) and result(22401.0) for user alex.
+2021-08-29 21:47:35 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (2423.0,232.0) and result(2191.0) for user alex.
+2021-08-29 21:47:36 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 21:47:40 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2324.0,24.0) and result(2348.0) for user alex.
+2021-08-29 21:47:41 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 21:54:06 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 21:54:08 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 21:54:10 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 21:54:12 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 21:54:14 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,3.0) and result(26.0) for user alex.
+2021-08-29 21:54:18 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (24.0,24.0) and result(576.0) for user alex.
+2021-08-29 21:54:20 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 21:54:23 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (24.0,24.0) and result(576.0) for user alex.
+2021-08-29 21:54:25 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 21:54:28 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (24.0,24.0) and result(0.0) for user alex.
+2021-08-29 21:54:29 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 22:10:47 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 22:10:49 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 22:10:52 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 22:10:54 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 22:11:03 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 22:11:58 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 22:12:00 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 22:12:03 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 22:12:05 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 22:12:06 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,44.0) and result(68.0) for user alex.
+2021-08-29 22:12:08 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 22:12:10 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,42.0) and result(66.0) for user alex.
+2021-08-29 22:12:13 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (24.0,4.0) and result(96.0) for user alex.
+2021-08-29 22:12:16 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (24.0,4.0) and result(20.0) for user alex.
+2021-08-29 22:12:17 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 22:12:53 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (23.0,24.0) and result(-1.0) for user alex.
+2021-08-29 22:12:57 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (24.0,42.0) and result(-18.0) for user alex.
+2021-08-29 22:13:00 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,42.0) and result(66.0) for user alex.
+2021-08-29 22:38:48 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,452.0) and result(475.0) for user alex.
+2021-08-29 22:38:49 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,5.0) and result(7.0) for user alex.
+2021-08-29 22:42:15 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 22:42:19 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (456.0,24.0) and result(10944.0) for user alex.
+2021-08-29 22:42:22 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (2525.0,424.0) and result(2101.0) for user alex.
+2021-08-29 22:42:25 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2525.0,255.0) and result(2780.0) for user alex.
+2021-08-29 23:08:55 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 23:09:00 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:09:02 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:09:05 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,3.0) and result(26.0) for user alex.
+2021-08-29 23:09:07 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (323.0,42.0) and result(365.0) for user alex.
+2021-08-29 23:09:09 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,424.0) and result(448.0) for user alex.
+2021-08-29 23:09:11 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (424.0,424.0) and result(848.0) for user alex.
+2021-08-29 23:09:14 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (423.0,23.0) and result(446.0) for user alex.
+2021-08-29 23:09:17 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,32.0) and result(56.0) for user alex.
+2021-08-29 23:09:20 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 23:09:22 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (212.0,34.0) and result(246.0) for user alex.
+2021-08-29 23:09:25 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 23:09:27 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 23:09:30 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,42.0) and result(66.0) for user alex.
+2021-08-29 23:09:31 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,42.0) and result(66.0) for user alex.
+2021-08-29 23:09:34 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (424.0,4.0) and result(0.0) for user alex.
+2021-08-29 23:09:37 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (24.0,4.0) and result(96.0) for user alex.
+2021-08-29 23:09:41 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (241.0,1.0) and result(240.0) for user alex.
+2021-08-29 23:09:45 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (231.0,41.0) and result(9471.0) for user alex.
+2021-08-29 23:09:49 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (1413.0,13.0) and result(18369.0) for user alex.
+2021-08-29 23:09:50 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:21:31 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:21:34 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:21:37 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:21:38 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:21:41 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,23.0) and result(46.0) for user alex.
+2021-08-29 23:21:45 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (12.0,432.0) and result(444.0) for user alex.
+2021-08-29 23:21:48 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (325.0,3235.0) and result(3560.0) for user alex.
+2021-08-29 23:21:50 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (235.0,5235.0) and result(5470.0) for user alex.
+2021-08-29 23:21:53 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (325.0,332.0) and result(657.0) for user alex.
+2021-08-29 23:21:55 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3253.0,2355.0) and result(5608.0) for user alex.
+2021-08-29 23:21:57 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (325.0,235.0) and result(560.0) for user alex.
+2021-08-29 23:21:59 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (25.0,32.0) and result(57.0) for user alex.
+2021-08-29 23:22:02 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (235235.0,2351.0) and result(237586.0) for user alex.
+2021-08-29 23:22:04 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (34.0,32.0) and result(66.0) for user alex.
+2021-08-29 23:22:06 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (235.0,235.0) and result(470.0) for user alex.
+2021-08-29 23:22:07 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (325.0,235.0) and result(560.0) for user alex.
+2021-08-29 23:22:09 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (235.0,32.0) and result(267.0) for user alex.
+2021-08-29 23:22:13 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (modulo) with num (532.0,32.0) and result(20.0) for user alex.
+2021-08-29 23:22:16 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (35.0,3.0) and result(105.0) for user alex.
+2021-08-29 23:22:19 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (53.0,5.0) and result(265.0) for user alex.
+2021-08-29 23:22:22 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (subtraction) with num (235.0,35.0) and result(200.0) for user alex.
+2021-08-29 23:22:25 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (325.0,3.0) and result(975.0) for user alex.
+2021-08-29 23:22:32 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (35.32325,3253.35) and result(114918.895) for user alex.
+2021-08-29 23:22:35 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (325.0,235.0) and result(560.0) for user alex.
+2021-08-29 23:22:37 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (325.0,325.0) and result(105625.0) for user alex.
+2021-08-29 23:22:38 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:26:53 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:26:54 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:26:57 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,4.0) and result(27.0) for user alex.
+2021-08-29 23:26:59 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,424.0) and result(448.0) for user alex.
+2021-08-29 23:27:01 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,424.0) and result(448.0) for user alex.
+2021-08-29 23:27:03 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,424.0) and result(448.0) for user alex.
+2021-08-29 23:27:05 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (244.0,24.0) and result(268.0) for user alex.
+2021-08-29 23:27:07 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,42.0) and result(66.0) for user alex.
+2021-08-29 23:27:09 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24315.0,31535.0) and result(55850.0) for user alex.
+2021-08-29 23:27:11 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1353.0,553.0) and result(1906.0) for user alex.
+2021-08-29 23:27:12 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3155.0,351.0) and result(3506.0) for user alex.
+2021-08-29 23:27:15 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (3155.0,531.0) and result(5.941) for user alex.
+2021-08-29 23:27:18 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (31.0,53.0) and result(0.584) for user alex.
+2021-08-29 23:27:21 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (35.0,35.0) and result(1.0) for user alex.
+2021-08-29 23:27:27 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (352.0,235.0) and result(1.497) for user alex.
+2021-08-29 23:27:28 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:27:45 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:29:11 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:29:24 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-29 23:29:38 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - eugene.
+2021-08-29 23:29:51 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Login attempt failed.
+2021-08-29 23:29:56 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:29:57 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:30:35 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 23:30:41 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:30:43 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:30:47 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1.0,1.0) and result(2.0) for user alex.
+2021-08-29 23:30:49 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-29 23:30:52 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3.0,3.0) and result(6.0) for user alex.
+2021-08-29 23:30:54 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (4.0,4.0) and result(8.0) for user alex.
+2021-08-29 23:30:57 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (5.0,5.0) and result(10.0) for user alex.
+2021-08-29 23:30:59 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (6.0,6.0) and result(12.0) for user alex.
+2021-08-29 23:31:02 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (7.0,7.0) and result(14.0) for user alex.
+2021-08-29 23:31:04 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (8.0,8.0) and result(16.0) for user alex.
+2021-08-29 23:31:06 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (9.0,9.0) and result(18.0) for user alex.
+2021-08-29 23:31:10 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (10.0,10.0) and result(20.0) for user alex.
+2021-08-29 23:31:13 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11.0,11.0) and result(22.0) for user alex.
+2021-08-29 23:31:15 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (12.0,12.0) and result(24.0) for user alex.
+2021-08-29 23:31:18 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (13.0,13.0) and result(26.0) for user alex.
+2021-08-29 23:31:22 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (1.0,1.0) and result(1.0) for user alex.
+2021-08-29 23:31:26 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (2.0,2.0) and result(1.0) for user alex.
+2021-08-29 23:31:30 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (3.0,3.0) and result(1.0) for user alex.
+2021-08-29 23:31:31 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:34:01 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 23:34:04 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:34:07 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:34:10 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1.0,1.0) and result(2.0) for user alex.
+2021-08-29 23:34:12 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-29 23:34:14 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3.0,3.0) and result(6.0) for user alex.
+2021-08-29 23:34:16 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (4.0,4.0) and result(8.0) for user alex.
+2021-08-29 23:34:18 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (5.0,5.0) and result(10.0) for user alex.
+2021-08-29 23:34:20 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (6.0,6.0) and result(12.0) for user alex.
+2021-08-29 23:34:22 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (7.0,7.0) and result(14.0) for user alex.
+2021-08-29 23:34:24 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (8.0,8.0) and result(16.0) for user alex.
+2021-08-29 23:34:26 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (9.0,9.0) and result(18.0) for user alex.
+2021-08-29 23:34:31 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (10.0,10.0) and result(20.0) for user alex.
+2021-08-29 23:34:33 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11.0,11.0) and result(22.0) for user alex.
+2021-08-29 23:34:37 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (1.0,1.0) and result(1.0) for user alex.
+2021-08-29 23:34:40 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-29 23:34:43 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (3.0,3.0) and result(9.0) for user alex.
+2021-08-29 23:34:46 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (4.0,4.0) and result(16.0) for user alex.
+2021-08-29 23:34:50 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (5.0,5.0) and result(25.0) for user alex.
+2021-08-29 23:36:55 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-29 23:36:58 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:37:00 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:37:02 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1.0,1.0) and result(2.0) for user alex.
+2021-08-29 23:37:04 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-29 23:37:06 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3.0,3.0) and result(6.0) for user alex.
+2021-08-29 23:37:09 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (4.0,4.0) and result(8.0) for user alex.
+2021-08-29 23:37:11 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (5.0,5.0) and result(10.0) for user alex.
+2021-08-29 23:37:13 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (6.0,6.0) and result(12.0) for user alex.
+2021-08-29 23:37:16 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (7.0,7.0) and result(14.0) for user alex.
+2021-08-29 23:37:19 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (8.0,8.0) and result(16.0) for user alex.
+2021-08-29 23:37:21 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (9.0,9.0) and result(18.0) for user alex.
+2021-08-29 23:37:25 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (10.0,10.0) and result(20.0) for user alex.
+2021-08-29 23:37:27 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11.0,11.0) and result(22.0) for user alex.
+2021-08-29 23:49:01 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:49:03 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:49:08 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,33.0) and result(56.0) for user alex.
+2021-08-29 23:49:09 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:15 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,32.0) and result(55.0) for user alex.
+2021-08-29 23:49:18 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (42.0,4.0) and result(46.0) for user alex.
+2021-08-29 23:49:21 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (14.0,14.0) and result(28.0) for user alex.
+2021-08-29 23:49:23 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (21.0,2.0) and result(23.0) for user alex.
+2021-08-29 23:49:26 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1414.0,14.0) and result(1428.0) for user alex.
+2021-08-29 23:49:28 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (141.0,414.0) and result(555.0) for user alex.
+2021-08-29 23:49:30 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1414.0,411.0) and result(1825.0) for user alex.
+2021-08-29 23:49:31 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:32 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:35 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:38 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:40 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:43 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:45 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:46 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:46 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:48 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:49 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:49 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:50 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:50 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:51 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:51 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:49:54 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:49:56 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:49:58 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:49:59 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:00 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:00 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:01 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:04 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:05 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:06 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:07 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:25 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:34 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:48 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:50 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:52 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:50:53 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-29 23:51:03 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:55:06 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 23:56:46 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 23:56:51 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-29 23:59:27 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-29 23:59:34 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-29 23:59:37 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-29 23:59:39 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-29 23:59:42 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 23:59:43 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 23:59:45 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-29 23:59:47 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 23:59:49 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,24.0) and result(48.0) for user alex.
+2021-08-29 23:59:51 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (12.0,41.0) and result(53.0) for user alex.
+2021-08-29 23:59:54 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (14.0,11.0) and result(25.0) for user alex.
+2021-08-29 23:59:55 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (142.0,4.0) and result(146.0) for user alex.
+2021-08-29 23:59:58 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (324.0,34.0) and result(9.529) for user alex.
+2021-08-30 00:00:01 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (34.0,4.0) and result(8.5) for user alex.
+2021-08-30 00:00:06 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (3535.0,5.0) and result(707.0) for user alex.
+2021-08-30 00:00:08 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (35.0,53.0) and result(0.66) for user alex.
+2021-08-30 00:00:09 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:13 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:18 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:19 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:22 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:29 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:31 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:33 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:00:36 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:00:38 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:00:39 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:00:41 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:00:42 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:01:12 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:02:09 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 00:02:13 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:14 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:15 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:16 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:17 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:18 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:19 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:20 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:21 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:28 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:29 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:38 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:41 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 00:02:50 [http-nio-8080-exec-1] INFO  by.voluevich.filters.CheckInputFilter - Attempting to divide by 0
+2021-08-30 00:03:05 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.LogOutServlet - End session user - alex.
+2021-08-30 00:03:10 [http-nio-8080-exec-5] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-30 17:31:38 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-30 17:31:40 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-30 17:31:43 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1.0,1.0) and result(2.0) for user alex.
+2021-08-30 17:31:45 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-30 17:31:47 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (3.0,3.0) and result(6.0) for user alex.
+2021-08-30 17:31:49 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (4.0,4.0) and result(8.0) for user alex.
+2021-08-30 17:31:51 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (5.0,5.0) and result(10.0) for user alex.
+2021-08-30 17:32:01 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (1.0,1.0) and result(1.0) for user alex.
+2021-08-30 17:32:04 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (2.0,2.0) and result(4.0) for user alex.
+2021-08-30 17:32:08 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (3.0,3.0) and result(9.0) for user alex.
+2021-08-30 17:32:13 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (4.0,4.0) and result(16.0) for user alex.
+2021-08-30 17:32:18 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (5.0,5.0) and result(25.0) for user alex.
+2021-08-30 17:32:22 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (1.0,1.0) and result(1.0) for user alex.
+2021-08-30 17:32:25 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (2.0,2.0) and result(1.0) for user alex.
+2021-08-30 17:32:28 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (3.0,3.0) and result(1.0) for user alex.
+2021-08-30 17:32:32 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (4.0,4.0) and result(1.0) for user alex.
+2021-08-30 17:32:35 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (division) with num (5.0,5.0) and result(1.0) for user alex.
+2021-08-30 17:32:37 [http-nio-8080-exec-4] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,324.0) and result(648.0) for user alex.
+2021-08-30 17:32:39 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,324.0) and result(648.0) for user alex.
+2021-08-30 17:32:41 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,324.0) and result(648.0) for user alex.
+2021-08-30 17:32:43 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (234.0,432.0) and result(666.0) for user alex.
+2021-08-30 17:32:45 [http-nio-8080-exec-9] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (324.0,432.0) and result(756.0) for user alex.
+2021-08-30 17:32:47 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (32451.0,135.0) and result(32586.0) for user alex.
+2021-08-30 17:32:50 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (32513.0,13531.0) and result(46044.0) for user alex.
+2021-08-30 17:32:52 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (1355.0,1355.0) and result(2710.0) for user alex.
+2021-08-30 17:36:40 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-30 17:36:41 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-30 17:38:36 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-30 17:38:38 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-30 17:38:41 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-30 17:43:05 [http-nio-8080-exec-1] WARN  by.voluevich.filters.LogInFilter - Attempted unauthorized access to the application!
+2021-08-30 17:43:46 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.RegistrationServlet - Register new user - alex.
+2021-08-30 17:43:48 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.LogInServlet - Successful logIn for user - alex.
+2021-08-30 17:43:52 [http-nio-8080-exec-10] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,2.0) and result(25.0) for user alex.
+2021-08-30 17:43:53 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:09 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (23.0,22.0) and result(45.0) for user alex.
+2021-08-30 17:45:13 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (22.0,22.0) and result(44.0) for user alex.
+2021-08-30 17:45:15 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,4.0) and result(28.0) for user alex.
+2021-08-30 17:45:16 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:18 [http-nio-8080-exec-1] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (24.0,44.0) and result(68.0) for user alex.
+2021-08-30 17:45:24 [http-nio-8080-exec-2] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,12.0) and result(132.0) for user alex.
+2021-08-30 17:45:27 [http-nio-8080-exec-3] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,1.0) and result(11.0) for user alex.
+2021-08-30 17:45:32 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (41.0,53.0) and result(2173.0) for user alex.
+2021-08-30 17:45:36 [http-nio-8080-exec-6] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (14.0,14.0) and result(196.0) for user alex.
+2021-08-30 17:45:43 [http-nio-8080-exec-7] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (11.0,12.0) and result(132.0) for user alex.
+2021-08-30 17:45:49 [http-nio-8080-exec-8] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (multiplication) with num (14.0,11.0) and result(154.0) for user alex.
+2021-08-30 17:45:50 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:51 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:53 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:54 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:57 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:57 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:58 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:45:59 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:00 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:01 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:02 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:02 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:03 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:03 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:04 [http-nio-8080-exec-4] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:05 [http-nio-8080-exec-5] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:06 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:46:06 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:47:59 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:48:01 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:05 [http-nio-8080-exec-2] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:06 [http-nio-8080-exec-3] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:12 [http-nio-8080-exec-5] DEBUG by.voluevich.service.SessionFacade - Successful request to operation (addition) with num (11111.0,1111.0) and result(12222.0) for user alex.
+2021-08-30 17:48:13 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.
+2021-08-30 17:48:13 [http-nio-8080-exec-7] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:15 [http-nio-8080-exec-8] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:16 [http-nio-8080-exec-9] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:17 [http-nio-8080-exec-10] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:18 [http-nio-8080-exec-1] INFO  by.voluevich.servlets.HistoryServlet - Request history by type.
+2021-08-30 17:48:21 [http-nio-8080-exec-6] INFO  by.voluevich.servlets.HistoryServlet - Request history by session.

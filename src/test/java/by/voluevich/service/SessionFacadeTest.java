@@ -78,7 +78,6 @@ class SessionFacadeTest {
         assertEquals(Optional.empty(), sessionFacade.getLogIn(new User(name, login, pass)));
     }
 
-
     @DisplayName("testing getLogIn method to true from facade")
     @ParameterizedTest
     @CsvSource({
@@ -88,7 +87,6 @@ class SessionFacadeTest {
     void getLogInTrueTest(String name, String login, String pass) {
         assertEquals(Optional.of(new User(name, login, pass)), sessionFacade.getLogIn(new User(name, login, pass)));
     }
-
 
     @DisplayName("testing calculate method to addition from facade")
     @ParameterizedTest
@@ -151,7 +149,7 @@ class SessionFacadeTest {
     }
 
     //To match the format of the double output
-    private double trimDouble(double num){
+    private double trimDouble(double num) {
         double result;
         BigDecimal resultBD = new BigDecimal(num);
         resultBD = resultBD.setScale(3, RoundingMode.DOWN);
@@ -235,16 +233,12 @@ class SessionFacadeTest {
 
 
     @AfterAll
-    void cleaning(){
+    void cleaning() {
         List<User> users = userDao.getAll();
         List<MathOperation> mathOperations = mathOperationDao.getAll();
 
-        for (int i = 0; !users.isEmpty(); ){
-            users.remove(i);
-        }
-        for (int i = 0; !mathOperations.isEmpty(); ){
-            mathOperations.remove(i);
-        }
+        users.clear();
+        mathOperations.clear();
     }
 }
 
