@@ -1,22 +1,24 @@
 package by.voluevich.service;
 
+import by.voluevich.dao.UserDao;
 import by.voluevich.entity.User;
 
 public class EditPassword {
+    private UserDao userDao;
+
+    public EditPassword(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public EditPassword() {
+    }
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
 
     public boolean editPassword(User user, String oldPass, String newPass) {
-        if (user.getPassword().equals(oldPass)) {
-            user.setPassword(newPass);
-            return true;
-        } else {
-            return false;
-        }
+        return userDao.updatePassword(user, oldPass, newPass);
     }
-
-    public boolean checkNewPass(User user, String pass) {
-        return !user.getPassword().equals(pass);
-    }
-
-
 }
 

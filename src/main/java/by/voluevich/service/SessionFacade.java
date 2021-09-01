@@ -6,7 +6,6 @@ import by.voluevich.service.dependencies.ServiceDependencies;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
 import java.util.Optional;
 
 public class SessionFacade {
@@ -32,11 +31,7 @@ public class SessionFacade {
     }
 
     public boolean editPassword(User user, String oldPass, String newPass) {
-        if (ServiceDependencies.editPassword.checkNewPass(user, newPass)) {
-            return ServiceDependencies.editPassword.editPassword(user, oldPass, newPass);
-        } else {
-            return false;
-        }
+        return ServiceDependencies.editPassword.editPassword(user, oldPass, newPass);
     }
 
     public boolean getRegistration(User user) {

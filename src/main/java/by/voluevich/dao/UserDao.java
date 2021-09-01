@@ -12,4 +12,7 @@ public interface UserDao {
 
     List<User> getAll();
 
+    boolean updateName(User user, String newName);
+
+    boolean updatePassword(User user, String oldPass, String newPass);
 }

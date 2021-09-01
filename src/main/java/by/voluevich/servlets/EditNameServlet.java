@@ -25,9 +25,11 @@ public class EditNameServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String newName = req.getParameter("newName");
+        User user = (User) req.getSession().getAttribute("user");
 
-        if (sessionFacade.editName((User) req.getSession().getAttribute("user"), newName)) {
+        if (sessionFacade.editName(user, newName)) {
             req.setAttribute("message_acc", "Successful!");
+            user.setName(newName);
             logger.info("Successful edit name attempt.");
         } else {
             req.setAttribute("message_acc", "The new name cannot be the same as the old one!");

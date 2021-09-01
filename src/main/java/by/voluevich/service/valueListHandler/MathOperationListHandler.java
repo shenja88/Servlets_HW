@@ -41,7 +41,7 @@ public class MathOperationListHandler implements ValueListIterator<MathOperation
     public List<MathOperation> getPreviousElements(int numCurrentPage, int numValuesPage) {
         List<MathOperation> list = new ArrayList<>();
         if (numCurrentPage <= 1) {
-            for (int i = 0; i < numValuesPage - 1; i ++){
+            for (int i = 0; i < numValuesPage; i ++){
                 if (i < mathOperations.size()){
                     list.add(mathOperations.get(i));
                 }
@@ -60,7 +60,7 @@ public class MathOperationListHandler implements ValueListIterator<MathOperation
     public List<MathOperation> getNextElements(int numCurrentPage, int numValuesPage) {
         List<MathOperation> list = new ArrayList<>();
         if (numCurrentPage <= 1) {
-            for (int i = 0; i < numValuesPage - 1; i ++){
+            for (int i = 0; i < numValuesPage; i ++){
                 if (i < mathOperations.size()){
                     list.add(mathOperations.get(i));
                 }

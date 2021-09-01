@@ -1,9 +1,9 @@
 package by.voluevich.service;
 
 import by.voluevich.dao.MathOperationDao;
-import by.voluevich.dao.MathOperationDaoImpl;
+import by.voluevich.dao.InMemoryMathOperationDaoImpl;
 import by.voluevich.dao.UserDao;
-import by.voluevich.dao.UserDaoImpl;
+import by.voluevich.dao.InMemoryUserDaoImpl;
 import by.voluevich.entity.MathOperation;
 import by.voluevich.entity.User;
 import org.junit.jupiter.api.*;
@@ -20,11 +20,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class SessionFacadeTest {
-    private final MathOperationDao mathOperationDao = new MathOperationDaoImpl();
-    private final UserDao userDao = new UserDaoImpl();
+class InMemorySessionFacadeTestDAO {
+    private final MathOperationDao mathOperationDao = new InMemoryMathOperationDaoImpl();
+    private final UserDao userDao = new InMemoryUserDaoImpl();
     private final SessionFacade sessionFacade = new SessionFacade();
-
 
     @BeforeAll
     void initDB() {

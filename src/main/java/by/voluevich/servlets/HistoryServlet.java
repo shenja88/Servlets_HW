@@ -24,24 +24,19 @@ public class HistoryServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        currentPage = 1;
         if (req.getParameter("type") == null) {
             if (req.getParameter("currentPage") != null) {
                 currentPage = Integer.parseInt(req.getParameter("currentPage"));
             }
 
-            List<List<MathOperation>> list = mathOperationHistory.listForResponseBySession(
+            List<MathOperation> currentList = mathOperationHistory.listForResponseBySession(
                     currentPage,
                     numValuesPage,
                     (User) req.getSession().getAttribute("user"));
             numPages = mathOperationHistory.getSizeListForResponse();
 
-            List<MathOperation> current = list.get(0);
-            List<MathOperation> next = list.get(2);
-            List<MathOperation> prev = list.get(1);
-
-            req.setAttribute("currentList", current);
-            req.setAttribute("nextList", next);
-            req.setAttribute("prevList", prev);
+            req.setAttribute("currentList", currentList);
             req.setAttribute("numPages", numPages);
             req.setAttribute("currentPage", currentPage);
             logger.info("Request history by session.");
@@ -58,20 +53,14 @@ public class HistoryServlet extends HttpServlet {
         if (req.getParameter("currentPage") != null) {
             currentPage = Integer.parseInt(req.getParameter("currentPage"));
         }
-        List<List<MathOperation>> list = mathOperationHistory.listForResponseByType(
+        List<MathOperation> currentList = mathOperationHistory.listForResponseByType(
                 currentPage,
                 numValuesPage,
                 typeOp,
                 (User) req.getSession().getAttribute("user"));
         numPages = mathOperationHistory.getSizeListForResponse();
 
-        List<MathOperation> next = list.get(2);
-        List<MathOperation> prev = list.get(1);
-        List<MathOperation> current = list.get(0);
-
-        req.setAttribute("currentList", current);
-        req.setAttribute("nextList", next);
-        req.setAttribute("prevList", prev);
+        req.setAttribute("currentList", currentList);
         req.setAttribute("numPages", numPages);
         req.setAttribute("currentPage", currentPage);
         req.setAttribute("type", typeOp);

@@ -1,14 +1,14 @@
 package by.voluevich.service.dependencies;
 
-import by.voluevich.dao.MathOperationDaoImpl;
-import by.voluevich.dao.UserDaoImpl;
+import by.voluevich.dao.JDBCMathOperationDaoImpl;
+import by.voluevich.dao.JDBCUserDaoImpl;
 import by.voluevich.service.*;
 
 public class ServiceDependencies {
-    public final static Calculation calculation = new Calculation(new MathOperationDaoImpl());
-    public final static EditName editName = new EditName();
-    public final static EditPassword editPassword = new EditPassword();
-    public final static LogIn logIn = new LogIn(new UserDaoImpl());
-    public final static RecordMathOperation recordMathOperation = new RecordMathOperation(new MathOperationDaoImpl());
-    public final static Registration registration = new Registration(new UserDaoImpl());
+    public final static Calculation calculation = new Calculation(new JDBCMathOperationDaoImpl());
+    public final static EditName editName = new EditName(new JDBCUserDaoImpl());
+    public final static EditPassword editPassword = new EditPassword(new JDBCUserDaoImpl());
+    public final static LogIn logIn = new LogIn(new JDBCUserDaoImpl());
+    public final static RecordMathOperation recordMathOperation = new RecordMathOperation(new JDBCMathOperationDaoImpl());
+    public final static Registration registration = new Registration(new JDBCUserDaoImpl());
 }

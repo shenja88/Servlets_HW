@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MathOperationDaoImpl implements MathOperationDao {
+public class InMemoryMathOperationDaoImpl implements MathOperationDao {
     private static final List<MathOperation> OPERATIONS = new ArrayList<>();
 
     public List<MathOperation> getAll() {

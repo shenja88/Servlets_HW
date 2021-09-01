@@ -31,11 +31,12 @@ public class EditPasswordServlet extends HttpServlet {
 
         if (sessionFacade.editPassword(user, oldPassword, newPassword)) {
             req.setAttribute("message_acc", "Successful!");
+            user.setPassword(newPassword);
+            logger.info("Successful request to edit password for user - {}", user.getName());
         } else {
             req.setAttribute("message_acc", "You entered the wrong old password or new password is the same as the old one!");
+            logger.info("Failed request to edit password for user - {}", user.getName());
         }
-
-        logger.info("Request to edit password for user - {}", user.getName());
         getServletContext().getRequestDispatcher("/editPassword.jsp").forward(req, resp);
     }
 }
