@@ -1,12 +1,19 @@
 package by.voluevich.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class MathOperation {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private double numOne;
     private double numTwo;
     private String typeOp;
     private double result;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn
     private User user;
 
     public MathOperation(double numOne, double numTwo, String typeOp, double result, User user) {
@@ -17,7 +24,24 @@ public class MathOperation {
         this.user = user;
     }
 
+    public MathOperation(int id, double numOne, double numTwo, String typeOp, double result, User user) {
+        this.id = id;
+        this.numOne = numOne;
+        this.numTwo = numTwo;
+        this.typeOp = typeOp;
+        this.result = result;
+        this.user = user;
+    }
+
     public MathOperation() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public double getNumOne() {
@@ -51,6 +75,7 @@ public class MathOperation {
     public void setResult(double result) {
         this.result = result;
     }
+
 
     public User getUser() {
         return user;

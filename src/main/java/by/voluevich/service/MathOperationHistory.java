@@ -1,5 +1,6 @@
 package by.voluevich.service;
 
+import by.voluevich.dao.HibernateMathOperationDaoIml;
 import by.voluevich.dao.MathOperationDao;
 import by.voluevich.dao.JDBCMathOperationDaoImpl;
 import by.voluevich.entity.MathOperation;
@@ -9,7 +10,7 @@ import by.voluevich.service.valueListHandler.MathOperationListHandler;
 import java.util.List;
 
 public class MathOperationHistory {
-    private final MathOperationDao mathOperationDao = new JDBCMathOperationDaoImpl();
+    private final MathOperationDao mathOperationDao = new HibernateMathOperationDaoIml();
     private int sizeThisListForResp = 0;
 
     public List<MathOperation> listForResponseBySession(int numCurrentPage, int numValuesPage, User user) {

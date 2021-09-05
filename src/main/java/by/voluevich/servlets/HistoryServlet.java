@@ -35,7 +35,6 @@ public class HistoryServlet extends HttpServlet {
                     numValuesPage,
                     (User) req.getSession().getAttribute("user"));
             numPages = mathOperationHistory.getSizeListForResponse();
-
             req.setAttribute("currentList", currentList);
             req.setAttribute("numPages", numPages);
             req.setAttribute("currentPage", currentPage);

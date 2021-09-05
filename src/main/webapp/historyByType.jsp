@@ -39,7 +39,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-6">
             <div>
-                <ol class="list-group list-group-numbered m-3">
+                <ol class="list-group list-group m-3">
                     <c:forEach var="math_operation" items="${requestScope.currentList}">
                         <li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">

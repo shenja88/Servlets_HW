@@ -1,8 +1,14 @@
 package by.voluevich.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @PrimaryKeyJoinColumn
+    private int id;
     private String name;
     private String login;
     private String password;
@@ -18,7 +24,22 @@ public class User {
         this.password = password;
     }
 
+    public User(int id, String name, String login, String password) {
+        this.id = id;
+        this.name = name;
+        this.login = login;
+        this.password = password;
+    }
+
     public User() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -56,5 +77,15 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(login, password);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

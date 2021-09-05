@@ -41,7 +41,7 @@
                 <div class="dropdown text-end me-5">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://img1.freepng.ru/20180509/iqq/kisspng-person-logo-computer-icons-5af2c2023a8e89.0321517415258588182399.jpg"
+                        <img src="https://pngicon.ru/file/uploads/1303507907_User_Green-128x128.png"
                              alt="mdo" width="45" height="45" class="rounded">
                     </a>
                     <ul class="dropdown-menu text-big" aria-labelledby="dropdownUser1" style="">
