@@ -7,6 +7,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import javax.transaction.Transactional;
 import java.util.List;
 
 public class HibernateMathOperationDaoIml implements MathOperationDao{

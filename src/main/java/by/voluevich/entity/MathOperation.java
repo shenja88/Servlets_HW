@@ -13,7 +13,7 @@ public class MathOperation {
     private String typeOp;
     private double result;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn
+    @JoinColumn(name = "user_id")
     private User user;
 
     public MathOperation(double numOne, double numTwo, String typeOp, double result, User user) {
