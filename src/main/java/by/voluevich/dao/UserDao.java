@@ -3,6 +3,7 @@ package by.voluevich.dao;
 import by.voluevich.entity.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserDao {
 
@@ -15,4 +16,6 @@ public interface UserDao {
     boolean updateName(User user, String newName);
 
     boolean updatePassword(User user, String oldPass, String newPass);
+
+    User getUserByLogin(String login);
 }

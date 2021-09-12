@@ -24,7 +24,7 @@ public class InMemoryUserDaoImpl implements UserDao {
 
     @Override
     public boolean updatePassword(User user, String oldPass, String newPass) {
-        if(isExist(user) && !oldPass.equals(newPass)) {
+        if(isExist(user) && !oldPass.equals(newPass) && oldPass.equals(user.getPassword())) {
             user.setPassword(newPass);
             return true;
         }
@@ -32,9 +32,14 @@ public class InMemoryUserDaoImpl implements UserDao {
     }
 
     @Override
+    public User getUserByLogin(String login) {
+        return USERS.stream().filter(x -> x.getLogin().equals(login)).findFirst().get();
+    }
+
+    @Override
     public boolean save(User user) {
         if (!isExist(user)) {
-            USERS.add(user);
+            USERS.add(new User(USERS.size() + 1, user.getName(), user.getLogin(), user.getPassword()));
             return true;
         } else {
             return false;

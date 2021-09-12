@@ -8,57 +8,79 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
-public class HibernateMathOperationDaoIml implements MathOperationDao{
-    private Session session;
+public class HibernateMathOperationDaoIml implements MathOperationDao {
 
     @Override
     public List<MathOperation> getAll() {
-        session = HibernateUtil.getSessionFactory().openSession();
-        List<MathOperation> list = session.createQuery("FROM MathOperation", MathOperation.class).getResultList();
-        session.close();
+        Transaction t = null;
+        List<MathOperation> list = new ArrayList<>();
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
+            t = session.beginTransaction();
+            list = session.createQuery("FROM MathOperation", MathOperation.class).getResultList();
+            t.commit();
+        } catch (HibernateException e) {
+            if (t != null) {
+                t.rollback();
+            }
+            e.printStackTrace();
+        }
         return list;
     }
 
     @Override
     public void save(MathOperation mathOperation) {
         Transaction t = null;
-        try{
-            session = HibernateUtil.getSessionFactory().openSession();
-            t= session.getTransaction();
-            t.begin();
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
+            t = session.beginTransaction();
             session.save(mathOperation);
             t.commit();
         } catch (HibernateException e) {
-            if(t != null){
+            if (t != null) {
                 t.rollback();
             }
             e.printStackTrace();
-        }finally {
-            session.close();
         }
     }
 
     @Override
     public List<MathOperation> getByType(String operation, User user) {
-        session = HibernateUtil.getSessionFactory().openSession();
-        Query<MathOperation> query = session.createQuery("FROM MathOperation where user.id = :user and typeOp = :operation", MathOperation.class);
-        query.setParameter("operation", operation);
-        query.setParameter("user", user.getId());
-        List<MathOperation> list = query.getResultList();
-        session.close();
+        Transaction t = null;
+        List<MathOperation> list = new ArrayList<>();
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            t = session.beginTransaction();
+            Query<MathOperation> query = session.createQuery("FROM MathOperation where user.id = :user and typeOp = :operation", MathOperation.class);
+            query.setParameter("operation", operation);
+            query.setParameter("user", user.getId());
+            list = query.getResultList();
+            t.commit();
+        } catch (HibernateException e) {
+            if (t != null) {
+                t.rollback();
+            }
+            e.printStackTrace();
+        }
         return list;
     }
 
     @Override
     public List<MathOperation> getBySession(User user) {
-        session = HibernateUtil.getSessionFactory().openSession();
-        Query<MathOperation> query = session.createQuery("FROM MathOperation where user.id = :user", MathOperation.class);
-        query.setParameter("user", user.getId());
-        List<MathOperation> list = query.getResultList();
-        session.close();
+        Transaction t = null;
+        List<MathOperation> list = new ArrayList<>();
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            t = session.beginTransaction();
+            Query<MathOperation> query = session.createQuery("FROM MathOperation where user.id = :user", MathOperation.class);
+            query.setParameter("user", user.getId());
+            list = query.getResultList();
+            t.commit();
+        } catch (HibernateException e) {
+            if (t != null) {
+                t.rollback();
+            }
+            e.printStackTrace();
+        }
         return list;
     }
 }

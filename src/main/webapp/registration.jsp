@@ -29,6 +29,22 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputTel" class="form-label">Telephone</label>
+                    <input type="number" name="telephone" class="form-control" id="exampleInputTel">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputCity" class="form-label">City</label>
+                    <input type="text" name="city" class="form-control" id="exampleInputCity">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputStreet" class="form-label">Street</label>
+                    <input type="text" name="street" class="form-control" id="exampleInputStreet">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputNumHome" class="form-label">Number Home</label>
+                    <input type="text" name="numHome" class="form-control" id="exampleInputNumHome">
+                </div>
                 <button type="submit" class="btn btn-primary">Get Registration!</button>
             </form>
         </div>

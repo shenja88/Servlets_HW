@@ -1,6 +1,8 @@
 package by.voluevich.utils;
 
+import by.voluevich.entity.Address;
 import by.voluevich.entity.MathOperation;
+import by.voluevich.entity.Telephone;
 import by.voluevich.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -35,6 +37,8 @@ public class HibernateUtil {
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
                 configuration.addAnnotatedClass(MathOperation.class);
+                configuration.addAnnotatedClass(Address.class);
+                configuration.addAnnotatedClass(Telephone.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();

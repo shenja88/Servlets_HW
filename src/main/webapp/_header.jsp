@@ -49,6 +49,10 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a href="/editName" class="nav-link px-2 link-dark">Edit name</a></li>
                         <li><hr class="dropdown-divider"></li>
+                        <li><a href="/addresses" class="nav-link px-2 link-dark">Addresses</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="/telephones" class="nav-link px-2 link-dark">Telephones</a></li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a href="/logOut" class="nav-link px-2 link-dark">Log out</a></li>
                     </ul>
                 </div>

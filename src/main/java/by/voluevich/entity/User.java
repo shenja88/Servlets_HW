@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,6 +12,13 @@ public class User {
     private String login;
     private String password;
 
+    public User(int id, String name, String login, String password) {
+        this.id = id;
+        this.name = name;
+        this.login = login;
+        this.password = password;
+    }
+
     public User(String name, String login, String password) {
         this.name = name;
         this.login = login;
@@ -20,13 +26,6 @@ public class User {
     }
 
     public User(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
-
-    public User(int id, String name, String login, String password) {
-        this.id = id;
-        this.name = name;
         this.login = login;
         this.password = password;
     }
@@ -71,12 +70,12 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(login, user.login) && Objects.equals(password, user.password);
+        return Objects.equals(getLogin(), user.getLogin()) && Objects.equals(getPassword(), user.getPassword());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(login, password);
+        return Objects.hash(getLogin(), getPassword());
     }
 
     @Override

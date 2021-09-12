@@ -12,13 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(servletNames = {"CalculationServlet", "HistoryServlet"})
+@WebFilter(servletNames = {"CalculationServlet", "HistoryServlet", "AddAddressServlet", "AddressesServlet",
+        "EditNameServlet", "EditPasswordServlet", "RemoveAddressServlet", "UpdateAddressServlet",
+        "AddTelephoneServlet", "RemoveTelephoneServlet", "TelephonesServlet", "UpdateTelephoneServlet"})
 public class LogInFilter extends HttpFilter {
     Logger logger = LoggerFactory.getLogger(LogInFilter.class.getName());
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-
         User user = (User) req.getSession().getAttribute("user");
         if (user == null || req.getSession() == null) {
             logger.warn("Attempted unauthorized access to the application!");

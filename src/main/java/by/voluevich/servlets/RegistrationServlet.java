@@ -1,5 +1,10 @@
 package by.voluevich.servlets;
 
+import by.voluevich.dao.HibernateUserDaoImpl;
+import by.voluevich.dao.InMemoryUserDaoImpl;
+import by.voluevich.dao.JDBCUserDaoImpl;
+import by.voluevich.entity.Address;
+import by.voluevich.entity.Telephone;
 import by.voluevich.entity.User;
 import by.voluevich.service.SessionFacade;
 import org.slf4j.Logger;
@@ -27,10 +32,17 @@ public class RegistrationServlet extends HttpServlet {
         String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        
+        String telephone = req.getParameter("telephone");
+        String city = req.getParameter("city");
+        String street = req.getParameter("street");
+        int numHome = Integer.parseInt(req.getParameter("numHome"));
 
         User user = new User(name, login, password);
         if (sessionFacade.getRegistration(user)) {
+            User userForInfo = new HibernateUserDaoImpl().getUserByLogin(user.getLogin());
+            sessionFacade.addAddress(new Address(true, city, street, numHome, userForInfo));
+            sessionFacade.addTelephone(new Telephone(true, telephone, userForInfo));
+
             req.setAttribute("message_reg", "Registration successful!");
             logger.info("Register new user - {}.", user.getName());
         } else {
